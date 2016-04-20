@@ -8,31 +8,11 @@ var log     = printit({
 });
 
 log.log = function( level, message ) {
-    switch( level ) {
-        case 'error': {
-            log.error( message );
-            
-            break;
-        }
-        
-        case 'debug': {
-            log.debug( message );
-            
-            break;
-        }
-        
-        case 'warn': {
-            log.warn( message );
-            
-            break;
-        }
-        
-        default: {
-            log.info( message );   
-        
-            break;
-        }
-    }  
+   if( log[level] ) {
+       return log[level]( message );
+   } 
+   
+   log.info( message );
 };
 
 // -----------------------------------------------------------------------------
