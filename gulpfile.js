@@ -24,8 +24,8 @@ gulp.task( 'build:scss-interface', function() {
                .pipe( plugins.plumberNotifier())
                .pipe( plugins.sass.sync())
                .pipe( plugins.autoprefixer())
-               .pipe( gulp.dest(['client/interface/stylesheets/dist/']))
+               .pipe( gulp.dest( 'client/interface/stylesheets/dist/' ))
                .pipe( plugins.cssnano())
                .pipe( plugins.rename({ suffix: '.min' }))
-               .pipe( gulp.dest(['client/interface/stylesheets/dist/']));
+               .pipe( gulp.dest( 'client/interface/stylesheets/dist/' ));
 });
