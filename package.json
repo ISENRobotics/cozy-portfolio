@@ -1,0 +1,24 @@
+{
+  "name": "cozy-portfolio",
+  "version": "0.0.1",
+  "description": "Cozy portfolio factory fully configurable",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run-script test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISENRobotics/cozy-portfolio.git"
+  },
+  "keywords": [
+    "cozy",
+    "portfolio",
+    "builder"
+  ],
+  "author": "FlorentinDUBOIS, GillesBIANNIC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ISENRobotics/cozy-portfolio/issues"
+  },
+  "homepage": "https://github.com/ISENRobotics/cozy-portfolio#readme"
+}
