@@ -30,9 +30,13 @@
   },
   "dependencies": {
     "americano": "^0.4.5",
+    "angular": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-route": "^1.5.5",
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.1",
+    "cozydb": "^0.1.11",
     "helmet": "^1.3.0",
     "morgan": "^1.7.0",
     "uuid": "^2.0.2",
