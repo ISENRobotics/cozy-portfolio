@@ -13,8 +13,8 @@ before_script:
     - npm install
 
 script:
-    - npm run-script lint
-    - npm run-script test
+    - npm run-script lint -loglevel silent
+    - npm run-script test -loglevel silent
     
 after_success:
     - export BUILD_RESULT="SUCCESS"
