@@ -7,6 +7,8 @@ var log     = printit({
     date: true 
 });
 
+// -----------------------------------------------------------------------------
+// create log function for winston to create a new provider
 log.log = function( level, message ) {
    if( log[level] ) {
        return log[level]( message );

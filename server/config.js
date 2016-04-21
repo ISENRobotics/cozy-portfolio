@@ -41,7 +41,7 @@ var routes = [
     { syml: '/public/vendor/angular', real: 'node_modules/angular-aria' },
     { syml: '/public/vendor/angular', real: 'node_modules/angular-route' },
     { syml: '/public/vendor/angular', real: 'node_modules/angular-translate/dist' },
-    { syml: '/public/stylesheets',    real: 'client/stylesheets' },
+    { syml: '/public/stylesheets',    real: 'client/stylesheets/dist' },
     { syml: '/public/assets',         real: 'client/assets' },
     { syml: '/',                      real: 'client/interface' }
 ];
