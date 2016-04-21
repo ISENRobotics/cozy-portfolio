@@ -6,7 +6,7 @@
 // example :
 // 
 // {
-//    '/path/of/your/route/:params': {
+//    'path/of/your/route/from/slash/:params': {
 //          get: function() {},
 //          post: function() {},
 //          put: function() {},
@@ -15,9 +15,5 @@
 // }
 
 module.exports = {
-      '/': {
-          get: function( req, res ) {
-              res.status(200).send('hrllo');
-          }
-      }
+
 };
