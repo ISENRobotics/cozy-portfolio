@@ -1,5 +1,6 @@
 {
   "name": "cozy-portfolio",
+  "cozy-displayName": "Portfolio",
   "version": "0.0.1",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
@@ -53,5 +54,8 @@
     "printit": "^0.1.19",
     "uuid": "^2.0.2",
     "winston": "^2.2.0"
+  },
+  "cozy-permissions": {
+    
   }
 }
