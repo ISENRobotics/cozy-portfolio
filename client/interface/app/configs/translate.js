@@ -6,7 +6,7 @@ var translations = {};
 // ----------------------------------------------------------------------------
 // load languages
 for( var i in languages ) {
-    translations[ languages[i]] = require( "./languages/" + languages[i] + '.lang' );
+    translations[ languages[i]] = require( "./app/languages/" + languages[i] + '.lang' );
 }
 
 // -----------------------------------------------------------------------------
