@@ -9,6 +9,9 @@
         "module",
         "exports", 
         "process",
-        "__dirname"
+        "__dirname",
+        "__filename",
+        "clearInterval",
+        "setInterval"
     ]
 }
