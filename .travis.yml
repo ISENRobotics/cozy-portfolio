@@ -13,9 +13,9 @@ before_script:
     - npm install
 
 script:
-    - npm run-script lint:html -loglevel silent
-    - npm run-script lint:js -loglevel silent
-    - npm run-script test -loglevel silent
+    - npm run-script lint:html
+    - npm run-script lint:js
+    - npm run-script test
     
 after_success:
     - export BUILD_RESULT="SUCCESS"
