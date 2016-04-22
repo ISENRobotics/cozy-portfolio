@@ -1,10 +1,11 @@
 {
   "name": "cozy-portfolio",
+  "cozy-displayName": "Portfolio",
   "version": "0.0.1",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {
-    "test": "exit 0",
+    "test": "node test.js",
     "lint": "./node_modules/.bin/jshint --verbose server/**/*.js server.js && ./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html",
     "start": "node server.js",
     "dev": "node_modules/.bin/nodemon server.js --ignore client/"
@@ -19,6 +20,10 @@
     "builder"
   ],
   "author": "ISEN Brest",
+  "contributors": [
+    "Gilles Biannic",
+	"Florentin Dubois"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ISENRobotics/cozy-portfolio/issues"
@@ -34,13 +39,16 @@
     "gulp-sass": "^2.2.0",
     "htmlhint": "^0.9.12",
     "jshint": "^2.9.2",
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.9.1",
+    "qunit-color": "^1.15.0-1",
+    "walk": "^2.3.9"
   },
   "dependencies": {
     "americano": "^0.4.5",
     "angular": "^1.5.5",
     "angular-aria": "^1.5.5",
     "angular-route": "^1.5.5",
+    "angular-translate": "^2.11.0",
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.1",
@@ -50,5 +58,11 @@
     "printit": "^0.1.19",
     "uuid": "^2.0.2",
     "winston": "^2.2.0"
+  },
+"icon-path": "client/assets/images/appLogo.svg",
+"cozy-permissions": {
+    "User": {
+      "description": "User's data are required to fill your portfolio"
+    }
   }
 }
