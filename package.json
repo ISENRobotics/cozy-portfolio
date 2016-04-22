@@ -1,7 +1,7 @@
 {
   "name": "cozy-portfolio",
   "cozy-displayName": "Portfolio",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {
@@ -32,7 +32,11 @@
   },
   "homepage": "https://github.com/ISENRobotics/cozy-portfolio#readme",
   "devDependencies": {
-    
+    "nodemon": "^1.9.1",
+    "htmlhint": "^0.9.12",
+    "jshint": "^2.9.2",
+    "qunit-color": "^1.15.0-1",
+    "walk": "^2.3.9"      
   },
   "dependencies": {
     "gulp": "^3.9.1",
@@ -44,14 +48,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3",
-    "htmlhint": "^0.9.12",
-    "jshint": "^2.9.2",
-    "nodemon": "^1.9.1",
-    "qunit-color": "^1.15.0-1",
     "vinyl-named": "^1.1.0",
-    "walk": "^2.3.9",
     "webpack-stream": "^3.2.0",
-    
     "americano": "^0.4.5",
     "angular": "^1.5.5",
     "angular-aria": "^1.5.5",
