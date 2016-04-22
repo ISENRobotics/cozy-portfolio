@@ -15,7 +15,7 @@
 // }
 
 module.exports = {
-    'temp': {
-        get: function( req, res ) { res.status( 200 ).end(); }
+    '/': {
+        get: function( req, res ) { res.status( 200 ).redirect( '/index.html' ); }
     }
 };
