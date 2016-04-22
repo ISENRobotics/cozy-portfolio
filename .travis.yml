@@ -1,20 +1,20 @@
 language: node_js
 
 node_js:
-  - "5.11.0"
+  - "node"
   - "5"
   - "4.4.3"
   - "4"
   - "0.12"
   - "0.10"
-  - "node"
   
 before_script:
     - npm install
 
 script:
-    - npm run-script lint -loglevel silent
-    - npm run-script test -loglevel silent
+    - npm run-script lint:html
+    - npm run-script lint:js
+    - npm run-script test
     
 after_success:
     - export BUILD_RESULT="SUCCESS"
