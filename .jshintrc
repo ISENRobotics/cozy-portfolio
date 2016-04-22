@@ -12,6 +12,8 @@
         "__dirname",
         "__filename",
         "clearInterval",
-        "setInterval"
+        "setInterval",
+        "angular",
+        "app"
     ]
 }

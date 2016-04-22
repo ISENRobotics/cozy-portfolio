@@ -40,6 +40,7 @@ var routes = [
     { syml: '/public/vendor/angular', real: 'node_modules/angular' },
     { syml: '/public/vendor/angular', real: 'node_modules/angular-aria' },
     { syml: '/public/vendor/angular', real: 'node_modules/angular-route' },
+    { syml: '/public/vendor/angular', real: 'node_modules/angular-sanitize' },
     { syml: '/public/vendor/angular', real: 'node_modules/angular-translate/dist' },
     { syml: '/public/stylesheets',    real: 'client/stylesheets/dist' },
     { syml: '/public/assets',         real: 'client/assets' },
