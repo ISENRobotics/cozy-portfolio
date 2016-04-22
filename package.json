@@ -6,7 +6,8 @@
   "scripts": {
     "test": "exit 0",
     "lint": "./node_modules/.bin/jshint --verbose server/**/*.js server.js && ./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html",
-    "start": "./node_modules/.bin/nodemon server.js --ignore client/"
+    "start": "node server.js",
+    "dev": "node_modules/.bin/nodemon server.js --ignore client/"
   },
   "repository": {
     "type": "git",
