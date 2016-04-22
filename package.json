@@ -47,9 +47,8 @@
     "qunit-color": "^1.15.0-1",
     "vinyl-named": "^1.1.0",
     "walk": "^2.3.9",
-    "webpack-stream": "^3.2.0"
-  },
-  "dependencies": {
+    "webpack-stream": "^3.2.0",
+    
     "americano": "^0.4.5",
     "angular": "^1.5.5",
     "angular-aria": "^1.5.5",
@@ -65,6 +64,9 @@
     "printit": "^0.1.19",
     "uuid": "^2.0.2",
     "winston": "^2.2.0"
+  },
+  "dependencies": {
+    
   },
   "icon-path": "client/assets/images/appLogo.svg",
   "cozy-permissions": {
