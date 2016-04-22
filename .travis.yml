@@ -13,7 +13,8 @@ before_script:
     - npm install
 
 script:
-    - npm run-script lint -loglevel silent
+    - npm run-script lint:html -loglevel silent
+    - npm run-script lint:js -loglevel silent
     - npm run-script test -loglevel silent
     
 after_success:
