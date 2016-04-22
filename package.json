@@ -32,6 +32,9 @@
   },
   "homepage": "https://github.com/ISENRobotics/cozy-portfolio#readme",
   "devDependencies": {
+    
+  },
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
@@ -64,9 +67,6 @@
     "printit": "^0.1.19",
     "uuid": "^2.0.2",
     "winston": "^2.2.0"
-  },
-  "dependencies": {
-    
   },
   "icon-path": "client/assets/images/appLogo.svg",
   "cozy-permissions": {
