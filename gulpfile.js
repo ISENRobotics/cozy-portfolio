@@ -34,7 +34,7 @@ gulp.task( "build:js", function() {
 // ----------------------------------------------------------------------------
 // build:scss
 gulp.task( 'build:scss', function() {
-    return gulp.src(['client/stylesheets/**/*.scss'])
+    return gulp.src(['client/stylesheets/imports.scss'])
                .pipe( plugins.plumberNotifier())
                .pipe( plugins.sass.sync())
                .pipe( plugins.autoprefixer())
