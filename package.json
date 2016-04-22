@@ -21,6 +21,10 @@
     "builder"
   ],
   "author": "ISEN Brest",
+  "contributors": [
+    "Gilles Biannic",
+	"Florentin Dubois"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ISENRobotics/cozy-portfolio/issues"
@@ -61,5 +65,10 @@
     "uuid": "^2.0.2",
     "winston": "^2.2.0"
   },
-  "cozy-permissions": {}
+  "icon-path": "client/assets/images/appLogo.svg",
+  "cozy-permissions": {
+    "User": {
+      "description": "User's data are required to fill your portfolio"
+    }
+  }
 }
