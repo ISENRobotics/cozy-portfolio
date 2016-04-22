@@ -4,7 +4,7 @@
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {
-    "test": "node test.js --loglevel silent",
+    "test": "node test.js",
     "lint": "./node_modules/.bin/jshint --verbose server/**/*.js server.js && ./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html",
     "start": "./node_modules/.bin/nodemon server.js --ignore client/"
   },
