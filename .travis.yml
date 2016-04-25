@@ -7,13 +7,17 @@ node_js:
   - "4"
   - "0.12"
   - "0.10"
+
+sudo: required
   
 before_script:
+    - apt-get install zsh
+    - zsh
     - npm install
 
 script:
-    - ./node_modules/.bin/jshint --verbose server/**/*.js client/interface/app/**/*.js server.js
-    - ./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html
+    - npm run-script lint:html
+    - npm run-script lint:js
     - npm run-script test
     
 after_success:
