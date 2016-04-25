@@ -7,13 +7,9 @@ node_js:
   - "4"
   - "0.12"
   - "0.10"
-  
-before_script:
-    - npm install
 
 script:
-    - npm run-script lint:html
-    - npm run-script lint:js
+    - npm run-script lint
     - npm run-script test
     
 after_success:

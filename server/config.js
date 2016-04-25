@@ -44,7 +44,7 @@ var routes = [
     { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
     { syml: '/stylesheets',    real: 'client/stylesheets/dist' },
     { syml: '/assets',         real: 'client/assets' },
-    { syml: '/',              real: 'client/interface' }
+    { syml: '/',               real: 'client/interface' }
 ];
 
 for( var i in routes ) {
