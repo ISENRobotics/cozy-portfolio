@@ -9,8 +9,7 @@ node_js:
   - "0.10"
 
 script:
-    - npm run-script lint:html
-    - npm run-script lint:js
+    - npm run-script lint
     - npm run-script test
     
 after_success:
