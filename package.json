@@ -1,7 +1,7 @@
 {
   "name": "cozy-portfolio",
   "cozy-displayName": "Portfolio",
-  "version": "0.2.6",
+  "version": "0.2.9",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {

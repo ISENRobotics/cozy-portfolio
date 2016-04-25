@@ -11,7 +11,7 @@ node_js:
 sudo: required
   
 before_script:
-    - apt-get install zsh
+    - sudo apt-get install zsh
     - zsh
     - npm install
 
