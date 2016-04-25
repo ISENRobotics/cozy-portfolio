@@ -9,9 +9,58 @@ gulp.task( 'default', ['watch']);
 
 // ----------------------------------------------------------------------------
 // watch task
-gulp.task( 'watch', ['build'], function() {
+gulp.task( 'watch', ['build', 'lint-noerror'], function() {
     gulp.watch(['client/stylesheets/**/*.scss'], ['build:scss']);
     gulp.watch(['client/interface/app/**/*.js'], ['build:js']);
+    gulp.watch(['server/**/*.js', 'client/interface/app/**/*.js', 'server.js'], ['lint:js-noerror']);
+    gulp.watch(['client/**/*.html'], ['lint:html-noerror']);    
+});
+
+// ----------------------------------------------------------------------------
+// lint task
+gulp.task( 'lint', ['lint:js', 'lint:html']);
+
+// ----------------------------------------------------------------------------
+// lint:js
+gulp.task( 'lint:js', function() {
+   return gulp.src(['server/**/*.js', 'client/interface/app/**/*.js', 'server.js'])
+              .pipe( plugins.jshint())
+              .pipe( plugins.jshint.reporter( 'jshint-stylish' ))
+              .pipe( plugins.jshint.reporter('fail'));
+});
+
+// ----------------------------------------------------------------------------
+// lint:html
+gulp.task( 'lint:html', function() {
+   return gulp.src(['client/**/*.html'])
+              .pipe( plugins.htmlhint( '.htmlhintrc' ))
+              .pipe( plugins.htmlhint.reporter( 'htmlhint-stylish' ))
+              .pipe( plugins.htmlhint.failReporter({ suppress: true }));
+});
+
+// ----------------------------------------------------------------------------
+// lint-noerror
+gulp.task( 'lint-noerror', ['lint:js-noerror', 'lint:html-noerror']);
+
+// ----------------------------------------------------------------------------
+// lint:js-noerror
+gulp.task( 'lint:js-noerror', function() {
+   return gulp.src(['server/**/*.js', 'client/interface/app/**/*.js', 'server.js'])
+              .pipe( plugins.plumberNotifier())
+              .pipe( plugins.jshint())
+              .pipe( plugins.jshint.reporter( 'jshint-stylish' ))
+              .pipe( plugins.jshint.reporter('fail'));
+});
+
+
+// ----------------------------------------------------------------------------
+// lint:html-noerror
+gulp.task( 'lint:html-noerror', function() {
+   return gulp.src(['client/**/*.html'])
+              .pipe( plugins.plumberNotifier())
+              .pipe( plugins.htmlhint( '.htmlhintrc' ))
+              .pipe( plugins.htmlhint.reporter( 'htmlhint-stylish' ))
+              .pipe( plugins.htmlhint.failReporter({ suppress: true }));
 });
 
 // ----------------------------------------------------------------------------
