@@ -6,8 +6,6 @@
   "main": "server.js",
   "scripts": {
     "test": "node test.js",
-    "lint:js": "./node_modules/.bin/jshint --verbose server/**/*.js client/interface/app/**/*.js server.js",
-    "lint:html": "./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html",
     "start": "node server.js",
     "dev": "node_modules/.bin/nodemon server.js --ignore client/"
   },

@@ -12,8 +12,8 @@ before_script:
     - npm install
 
 script:
-    - npm run-script lint:html
-    - npm run-script lint:js
+    - ./node_modules/.bin/jshint --verbose server/**/*.js client/interface/app/**/*.js server.js
+    - ./node_modules/.bin/htmlhint --config .htmlhintrc client/**/*.html
     - npm run-script test
     
 after_success:
