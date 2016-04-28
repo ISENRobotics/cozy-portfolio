@@ -20,5 +20,9 @@ app.controller( 'navigation', ['$scope', function( $scope ) {
         }
     };
 
+    $scope.save = function() {
+
+    };
+
     $scope.setActive( '/banner' );
 }]);

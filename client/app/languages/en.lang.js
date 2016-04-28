@@ -9,7 +9,8 @@ module.exports = {
         "skills": "Skills",
         "experiences": "Experiences",
         "hobbies": "Hobbies",
-        "banner": "Banner"
+        "banner": "Banner",
+        "save": "Save"
     },
 
     "banner": {

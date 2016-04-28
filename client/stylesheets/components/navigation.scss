@@ -29,7 +29,7 @@ header {
                     padding: #{$space * 2} #{$space * 4};
 
                     width: 100%;
-                    height: 100;
+                    height: 100%;
 
                     vertical-align: middle;
 
@@ -40,7 +40,16 @@ header {
                     }
                 }
 
-                &:hover {
+                & > button, .button, input[type=button] {
+                    width: calc( 100% - #{$space * 8});
+                    height: 100%;
+
+                    vertical-align: middle;
+
+                    margin: #{$space * 2} #{$space * 4};
+                }
+
+                &:hover:not(.disable-hover) {
                     background-color: rgb( 200, 200, 200 );
                     transition: background-color $transition-time;
                 }

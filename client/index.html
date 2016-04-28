@@ -24,6 +24,12 @@
                     <li ng-repeat="item in menu" ng-class="{ active: item.active }" ng-click="setActive( item.link )" >
                         <a ng-href="#{{ item.link }}" >{{ item.translate | translate }}</a>
                     </li>
+
+                    <li class="disable-hover" >
+                        <button ng-click="save()" >
+                            {{ 'navigation.save' | translate }}
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </header>
