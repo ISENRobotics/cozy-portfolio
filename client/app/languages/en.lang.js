@@ -14,28 +14,26 @@ module.exports = {
     },
 
     "banner": {
-        "title": "lorem ipsum (title)",
-        "url": "lorem ipsum (url)",
-        "validate": "Validate"
+        "title": "Title of your banner",
+        "url": "URL of your banner's image"
     },
 
     "presentation": {
-        "title": "lorem ipsum (title)",
-        "content": "lorem ipsum (content)",
-        "validate": "Validate"
+        "title": "Title of your presentation",
+        "content": "Content of your presentation",
     },
 
     "education": {
-        "title": "lorem ipsum (title)",
-        "date": "lorem ipsum (date)",
-        "content": "lorem ipsum (content)",
+        "title": "Title of your education",
+        "date": "Date that you were in",
+        "content": "Description of your education",
         "name": "Education"
     },
 
     "experience": {
-        "title": "lorem ipsum (title)",
-        "date": "lorem ipsum (date)",
-        "content": "lorem ipsum (content)",
+        "title": "Title of your experience",
+        "date": "Date you were in",
+        "content": "Description",
         "name": "Experience"
     }
 };
