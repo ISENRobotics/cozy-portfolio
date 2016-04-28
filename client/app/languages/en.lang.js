@@ -29,5 +29,12 @@ module.exports = {
         "date": "lorem ipsum (date)",
         "content": "lorem ipsum (content)",
         "name": "Education"
+    },
+
+    "experience": {
+        "title": "lorem ipsum (title)",
+        "date": "lorem ipsum (date)",
+        "content": "lorem ipsum (content)",
+        "name": "Experience"
     }
 };
