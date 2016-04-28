@@ -1,7 +1,34 @@
+// ----------------------------------------------------------------------------
+// html and body rules
 html, body {
     width: 100%;
     height: 100%;
-    
+
     margin: 0;
     padding: 0;
+
+    line-height: 1.4;
+
+    font-family: "Source Sans Pro";
+    font-size: 11pt;
+    color: $dark-grey;
+
+    background-color: $body-bg-color;
+
+    & > main {
+        display: inline-block;
+
+        overflow-y: auto;
+
+        padding: $space;
+
+        width: calc( 100% - 250px );
+        height: calc( 100% -  #{$space * 2});
+    }
+
+    * {
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+    }
 }
+

@@ -42,12 +42,13 @@ var routes = [
     { syml: '/vendor/angular', real: 'node_modules/angular-route' },
     { syml: '/vendor/angular', real: 'node_modules/angular-sanitize' },
     { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
-    { syml: '/stylesheets',    real: 'client/stylesheets/dist' },
-    { syml: '/assets',         real: 'client/assets' },
-    { syml: '/',               real: 'client/interface' }
+    { syml: '/stylesheets',    real: 'node_modules/normalize-css' },
+    { syml: '/',               real: 'client/' }
 ];
 
 for( var i in routes ) {
+    logger.info( 'Load route : ' + routes[i].syml + ' -> ' + routes[i].real );
+
     extensions.push( router.use( routes[i].syml, americano.static( path.join( __dirname, '..', routes[i].real ))));
 }
 
@@ -57,7 +58,7 @@ logger.info( 'Export configurations settings' );
 module.exports = {
     common: {
         use: extensions,
-        
+
         useAfter: [
             americano.errorHandler({
                 dumpExceptions: true,
@@ -65,18 +66,18 @@ module.exports = {
             })
         ]
     },
-    
+
     development: {
         use: [
             americano.logger( 'dev' ),
-            morgan( 'dev' )            
+            morgan( 'dev' )
         ],
-        
+
         set: {
             debug: 'on'
         }
     },
-    
+
     production: [
         americano.logger( 'short' )
     ]

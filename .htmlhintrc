@@ -2,7 +2,7 @@
   "tagname-lowercase": true,
   "attr-lowercase": true,
   "attr-value-double-quotes": true,
-  "doctype-first": true,
+  "doctype-first": false,
   "tag-pair": true,
   "spec-char-escape": true,
   "id-unique": true,
@@ -20,6 +20,6 @@
   "inline-script-disabled": true,
   "space-tab-mixed-disabled": "true",
   "id-class-ad-disabled": true,
-  "href-abs-or-rel": "rel",
+  "href-abs-or-rel": false,
   "attr-unsafe-chars": true
 }

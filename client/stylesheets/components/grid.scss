@@ -1,0 +1,86 @@
+// ----------------------------------------------------------------------------
+// variables
+$col: 12;
+
+// ----------------------------------------------------------------------------
+// grid sytem
+body {
+    & .container {
+        display: block;
+        margin: 0 auto;
+        padding: $space;
+
+        max-width: calc( 100% - #{ $space * 2 });
+        width: calc( #{ $medium } - #{ $space * 2 } );
+
+        transition: width #{$transition-time * 2};
+
+        @media #{ $mq-small } and #{ $mq-medium } {
+            width: calc( 100% - #{ $space * 2 });
+
+            transition: width #{$transition-time * 2};
+        }
+    }
+
+    & .row {
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        transition: witdh $transition-time;
+
+        @for $i from 1 through $col {
+            & > .col {
+                &.s#{$i}, &.m#{$i}, &.l#{$i} {
+                    float: left;
+                }
+
+                @media #{ $mq-small } {
+                    &.s#{$i} {
+                        width: calc(#{ 100% / $col * $i } - #{ $space * 4 });
+                        margin: 0 #{ $space * 2 };
+                        margin-bottom: #{ $space * 2 };
+
+                        transition: witdh $transition-time;
+                    }
+
+                    &.offset-s#{$i} {
+                        margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
+                    }
+                }
+
+                @media #{ $mq-medium } {
+                    &.m#{$i} {
+                        width: calc(#{ 100% / $col * $i } - #{ $space * 4 });
+                        margin: 0 #{ $space * 2 };
+                        margin-bottom: #{ $space * 2 };
+
+                        transition: witdh $transition-time;
+                    }
+
+                    &.offset-m#{$i} {
+                        margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
+                    }
+                }
+
+                @media #{ $mq-large } {
+                    &.l#{$i} {
+                        width: calc(#{ 100% / $col * $i } - #{ $space * 4 });
+                        margin: 0 #{ $space * 2 };
+                        margin-bottom: #{ $space * 2 };
+
+                        transition: witdh $transition-time;
+                    }
+
+                    &.offset-l#{$i} {
+                        margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
+                    }
+                }
+            }
+        }
+    }
+}
