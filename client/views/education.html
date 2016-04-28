@@ -38,15 +38,15 @@
         </div>
 
         <div class="row">
-            <div class="col s12 offset-m4 m4 offset-l8 l2" ng-hide="$index +1 != educations.length" >
-                <button ng-click="add()" >
-                    <i class="material-icons" >add</i>
+            <div class="col s12 m4 l2" ng-class="{ 'offset-m8 offset-l10': $index +1 != educations.length, 'offset-m4 offset-l8': $index +1 == educations.length }" >
+                <button ng-click="remove( $index )" >
+                    <i class="material-icons" >remove</i>
                 </button>
             </div>
 
-            <div class="col s12 m4 l2" ng-class="{ 'offset-m8 offset-l10': $index +1 != educations.length }" >
-                <button ng-click="remove( $index )" >
-                    <i class="material-icons" >remove</i>
+            <div class="col s12 m4 l2" ng-hide="$index +1 != educations.length" >
+                <button ng-click="add()" >
+                    <i class="material-icons" >add</i>
                 </button>
             </div>
         </div>

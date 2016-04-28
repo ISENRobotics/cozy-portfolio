@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'navigation', ['$scope', function( $scope ) {
+app.controller( 'navigation', ['$scope', '$location', function( $scope, $location ) {
     $scope.menu = [
         { link: '/banner',       translate: 'navigation.banner' },
         { link: '/presentation', translate: 'navigation.presentation' },
@@ -24,5 +24,5 @@ app.controller( 'navigation', ['$scope', function( $scope ) {
 
     };
 
-    $scope.setActive( '/banner' );
+    $scope.setActive( $location.path());
 }]);
