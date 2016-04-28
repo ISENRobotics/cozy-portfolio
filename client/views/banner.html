@@ -2,15 +2,15 @@
     <form class="container" >
         <div class="row" >
             <div class="col s12 m12 l12" >
-                <h2>{{ 'navigation.presentation' | translate }}</h2>
+                <h2>{{ 'navigation.banner' | translate }}</h2>
             </div>
         </div>
 
         <div class="row" >
             <div class="col s12 m12 l12" >
                 <div class="input-field" >
-                    <input type="text" ng-model="presentation.title" ng-class="{ 'not-empty': !!presentation.title }" />
-                    <label>{{ 'presentation.title' | translate }}</label>
+                    <input type="text" ng-model="banner.title" ng-class="{ 'not-empty': !!banner.title }" />
+                    <label>{{ 'banner.title' | translate }}</label>
                 </div>
             </div>
         </div>
@@ -18,15 +18,15 @@
         <div class="row" >
             <div class="col s12 m12 l12" >
                 <div class="input-field" >
-                    <textarea rows="10" name="content" ng-model="presentation.content" ng-class="{ 'not-empty': !!presentation.content }" ></textarea>
-                    <label>{{ 'presentation.content' | translate }}</label>
+                    <input type="text" ng-model="banner.url" ng-class="{ 'not-empty': !!banner.url }" />
+                    <label>{{ 'banner.url' | translate }}</label>
                 </div>
             </div>
         </div>
 
         <div class="row" >
             <div class="col s12 m4 offset-m8 l2 offset-l10" >
-                <button type="submit" >{{ 'presentation.validate' | translate }}</button>
+                <button type="submit" >{{ 'banner.validate' | translate }}</button>
             </div>
         </div>
     </form>

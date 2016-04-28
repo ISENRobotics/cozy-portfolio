@@ -1,0 +1,94 @@
+
+// ----------------------------------------------------------------------------
+// input
+.input-field {
+    position: relative;
+
+    margin: 0;
+    margin-top: #{ 4 * $space };
+    margin-bottom: #{ 2 * $space };
+
+    & > label {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        font-size: inherit;
+        transition: top $transition-time, left $transition-time, font-size $transition-time;
+
+        padding: $space;
+    }
+
+    & > textarea {
+        resize: vertical;
+
+        line-height: 1.4;
+    }
+
+    & > input[type=text], & > textarea {
+        display: inline-block;
+
+        width: calc( 100% - #{ $space * 2 });
+        padding: $space;
+
+        border: none;
+        border-bottom: 2px solid $light-blue;
+
+        transition: border-bottom $transition-time;
+
+        &.not-empty ~ label {
+            top: #{ -4 * $space };
+            left: #{ -1 * $space };
+
+            font-size: 95%;
+            transition: top $transition-time, left $transition-time, font-size $transition-time;
+        }
+
+        &:focus {
+            border-bottom: 2px solid $blue;
+            outline: none;
+
+            transition: border-bottom $transition-time;
+
+            & ~ label {
+                top: #{ -4 * $space };
+                left: #{ -1 * $space };
+
+                font-size: 95%;
+                transition: top $transition-time, left $transition-time, font-size $transition-time;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// button
+button, .button, input[type=button] {
+    border: none;
+    box-shadow: none;
+    border-radius: $border-radius;
+
+    cursor: pointer;
+
+    min-height: 40px;
+
+    color: $white;
+    background-color: $blue;
+
+    text-transform: uppercase;
+
+    padding: $space;
+
+    .row > .col > & {
+        width: calc( 100% - #{ $space * 2 });
+    }
+
+    &:hover, &:active {
+        background-color: $dark-blue;
+    }
+
+    &.success {
+        background-color: $green;
+    }
+}

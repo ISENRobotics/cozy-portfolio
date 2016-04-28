@@ -21,12 +21,12 @@ header {
                 font-size: 1.2rem;
 
                 background-color: transparent;
-                transition: background-color 0.5s;
+                transition: background-color $transition-time;
 
                 & > a {
                     display: inline-block;
 
-                    padding: 12px 24px;
+                    padding: #{$space * 2} #{$space * 4};
 
                     width: 100%;
                     height: 100;
@@ -42,12 +42,12 @@ header {
 
                 &:hover {
                     background-color: rgb( 200, 200, 200 );
-                    transition: background-color 0.5s;
+                    transition: background-color $transition-time;
                 }
 
                 &.active {
                     background-color: rgb( 255, 255, 255 );
-                    transition: background-color 0.5s;
+                    transition: background-color $transition-time;
                 }
             }
         }

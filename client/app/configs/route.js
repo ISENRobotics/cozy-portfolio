@@ -4,11 +4,12 @@ app.config(["$routeProvider", function( $routeProvider ) {
     // -----------------------------------------------------------------------------
     // define routes
     var routes = [
+        { link: '/banner',       templateUrl: 'views/banner.html',       controller: 'banner' },
         { link: '/presentation', templateUrl: 'views/presentation.html', controller: 'presentation' },
-        { link: '/education', templateUrl: 'views/education.html', controller: 'education' },
-        { link: '/skills', templateUrl: 'views/skills.html', controller: 'skills' },
-        { link: '/experiences', templateUrl: 'views/experiences.html', controller: 'experiences' },
-        { link: '/hobbies', templateUrl: 'views/hobbies.html', controller: 'hobbies' },
+        { link: '/education',    templateUrl: 'views/education.html',    controller: 'education' },
+        { link: '/skills',       templateUrl: 'views/skills.html',       controller: 'skills' },
+        { link: '/experiences',  templateUrl: 'views/experiences.html',  controller: 'experiences' },
+        { link: '/hobbies',      templateUrl: 'views/hobbies.html',      controller: 'hobbies' }
     ];
 
 
@@ -23,5 +24,5 @@ app.config(["$routeProvider", function( $routeProvider ) {
 
     // -----------------------------------------------------------------------------
     // otherwise reroute
-    $routeProvider.otherwise( "/presentation" );
+    $routeProvider.otherwise( "/banner" );
 }]);

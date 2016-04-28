@@ -1,8 +1,4 @@
 // ----------------------------------------------------------------------------
-// base color
-$body-bg-color: #fff;
-
-// ----------------------------------------------------------------------------
 // html and body rules
 html, body {
     width: 100%;
@@ -14,16 +10,20 @@ html, body {
     line-height: 1.4;
 
     font-family: "Source Sans Pro";
+    font-size: 11pt;
+    color: $dark-grey;
 
     background-color: $body-bg-color;
 
     & > main {
         display: inline-block;
 
-        padding: 8px;
+        overflow-y: auto;
+
+        padding: $space;
 
         width: calc( 100% - 250px );
-        height: calc( 100% - 16px );
+        height: calc( 100% -  #{$space * 2});
     }
 
     * {
