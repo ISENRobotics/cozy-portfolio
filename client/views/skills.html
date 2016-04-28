@@ -1,3 +1,47 @@
-<div class="wrapper-center" >
-    <h2>{{ 'navigation.skills' | translate }}</h2>
-</div>
+<form class="container" >
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <h2>{{ 'navigation.skills' | translate }}</h2>
+        </div>
+    </div>
+
+    <div ng-repeat="skill in skills" >
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h3 class="line" >{{ 'skill.name' | translate }} {{ $index }}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="input-field">
+                    <input type="text" ng-model="skill.category" ng-class="{ 'not-empty': !!skill.category }" />
+                    <label>{{ 'skill.category' | translate }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="input-field">
+                    <textarea rows="4" ng-model="skill.content" ng-class="{ 'not-empty': !!skill.content }" ></textarea>
+                    <label>{{ 'skill.content' | translate }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4 l2" ng-class="{ 'offset-m8 offset-l10': $index +1 != skills.length, 'offset-m4 offset-l8': $index +1 == skills.length }" >
+                <button ng-click="remove( $index )" >
+                    <i class="material-icons" >remove</i>
+                </button>
+            </div>
+
+            <div class="col s12 m4 l2" ng-hide="$index +1 != skills.length" >
+                <button ng-click="add()" >
+                    <i class="material-icons" >add</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
