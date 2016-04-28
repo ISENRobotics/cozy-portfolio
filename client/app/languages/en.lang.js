@@ -35,5 +35,11 @@ module.exports = {
         "date": "Date you were in",
         "content": "Description",
         "name": "Experience"
+    },
+
+    "hobbie": {
+        "category": "Name of your hobbie",
+        "content": "Description",
+        "name": "Hobbie"
     }
 };
