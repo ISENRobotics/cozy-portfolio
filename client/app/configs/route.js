@@ -11,7 +11,8 @@ app.config(["$routeProvider", function( $routeProvider ) {
         { link: '/skills',       templateUrl: 'views/skills.html',       controller: 'skills' },
         { link: '/experiences',  templateUrl: 'views/experiences.html',  controller: 'experiences' },
         { link: '/hobbies',      templateUrl: 'views/hobbies.html',      controller: 'hobbies' },
-        { link: '/contact',      templateUrl: 'views/contact.html',      controller: 'contact' }
+        { link: '/contact',      templateUrl: 'views/contact.html',      controller: 'contact' },
+        { link: '/settings',     templateUrl: 'views/settings.html',     controller: 'settings' }
     ];
 
     // -----------------------------------------------------------------------------

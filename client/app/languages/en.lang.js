@@ -12,7 +12,8 @@ module.exports = {
         "banner": "Banner",
         "save": "Save",
         "contact": "Contact",
-        "home": "Home"
+        "home": "Home",
+        "settings": "Settings"
     },
 
     "banner": {
@@ -59,5 +60,9 @@ module.exports = {
         "content":
             "<h3 class='line' >Hello</h3>" +
             "<p>Better functionnalities coming soon !</p>"
+    },
+
+    "settings": {
+        "name": "Settings"
     }
 };
