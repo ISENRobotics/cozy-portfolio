@@ -72,6 +72,9 @@
   "cozy-permissions": {
     "User": {
       "description": "User's data are required to fill your portfolio"
+    },
+    "Portfolio": {
+      "description": "Needs access to portfolio data"
     }
   }
 }

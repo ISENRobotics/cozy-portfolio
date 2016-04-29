@@ -5,10 +5,14 @@
 // -----------------------------------------------------------------------------
 // requirements
 var americano = require( 'americano' );
+var cozydb    = require( 'cozydb' );
 
 // -----------------------------------------------------------------------------
 // launch americano server
-americano.start({
-    name: process.env.NAME || "",
-    port: process.env.PORT || 9200
+
+cozydb.configure(__dirname, null, function() {
+    americano.start({
+        name: process.env.NAME || "",
+        port: process.env.PORT || 9200
+    });
 });

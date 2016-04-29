@@ -4,7 +4,7 @@
 
 // ----------------------------------------------------------------------------
 // example :
-// 
+//
 // {
 //    'path/of/your/route/from/slash/:params': {
 //          get: function() {},
@@ -14,6 +14,13 @@
 //    }
 // }
 
-module.exports = {
+var rest = require('./rest');
 
+module.exports = {
+    ':resource' : {
+        get: rest.get,
+        post: rest.post,
+        delete: rest.delete,
+        put: rest.update
+    }
 };
