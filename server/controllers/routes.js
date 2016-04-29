@@ -14,10 +14,13 @@
 //    }
 // }
 
-var banner = require('./banner');
+var rest = require('./rest');
 
 module.exports = {
-    'banner' : {
-        get: banner.get
+    ':resource' : {
+        get: rest.get,
+        post: rest.post,
+        delete: rest.delete,
+        put: rest.update
     }
 };
