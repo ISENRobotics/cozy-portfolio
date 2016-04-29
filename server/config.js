@@ -20,8 +20,8 @@ var secret      = uuid.v4();
 var extensions = [];
 
 // ----------------------------------------------------------------------------
-// ?? - I don't know what it does
-logger.info( 'Load americano methodOverride' );
+// Overrides DELETE and PUT methods
+logger.info( 'Load americano methodOverride for old browsers' );
 extensions.push( americano.methodOverride());
 
 // ----------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 
 // ----------------------------------------------------------------------------
 // example :
-// 
+//
 // {
 //    'path/of/your/route/from/slash/:params': {
 //          get: function() {},
@@ -14,6 +14,10 @@
 //    }
 // }
 
-module.exports = {
+var banner = require('./banner');
 
+module.exports = {
+    'banner' : {
+        get: banner.get
+    }
 };
