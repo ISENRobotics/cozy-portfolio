@@ -10,7 +10,9 @@ module.exports = {
         "experiences": "Experiences",
         "hobbies": "Hobbies",
         "banner": "Banner",
-        "save": "Save"
+        "save": "Save",
+        "contact": "Contact",
+        "home": "Home"
     },
 
     "banner": {
@@ -35,5 +37,27 @@ module.exports = {
         "date": "Date you were in",
         "content": "Description",
         "name": "Experience"
+    },
+
+    "hobbie": {
+        "category": "Name of your hobbie",
+        "content": "Description",
+        "name": "Hobbie"
+    },
+
+    "skill": {
+        "category": "Name of your skill",
+        "content": "Description",
+        "name": "Skill"
+    },
+
+    "contact": {
+        "email": "Email was send message"
+    },
+
+    "home": {
+        "content":
+            "<h3 class='line' >Hello</h3>" +
+            "<p>Better functionnalities coming soon !</p>"
     }
 };
