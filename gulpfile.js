@@ -79,11 +79,13 @@ gulp.task( 'build', ['build:scss', 'build:js']);
 gulp.task( "build:js", function() {
     return gulp.src(['client/app/**/!(*.lang).js'])
                .pipe( plugins.plumberNotifier())
+               .pipe( plugins.sourcemaps.init())
                .pipe( plugins.concat( 'application.min.js' ))
                .pipe( gulp.dest( 'client' ))
                .pipe( require( 'vinyl-named' )())
                .pipe( require( 'webpack-stream' )())
                .pipe( plugins.uglify({ compress: {}}))
+               .pipe( plugins.sourcemaps.init())
                .pipe( gulp.dest( 'client' ));
 });
 
@@ -92,9 +94,11 @@ gulp.task( "build:js", function() {
 gulp.task( 'build:scss', function() {
     return gulp.src(['client/stylesheets/imports.scss'])
                .pipe( plugins.plumberNotifier())
+               .pipe( plugins.sourcemaps.init())
                .pipe( plugins.sass.sync())
                .pipe( plugins.autoprefixer( autoprefixer ))
                .pipe( plugins.cssnano())
                .pipe( plugins.rename({ suffix: '.min' }))
+               .pipe( plugins.sourcemaps.write())
                .pipe( gulp.dest( 'client/' ));
 });

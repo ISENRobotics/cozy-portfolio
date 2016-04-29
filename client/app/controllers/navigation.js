@@ -1,13 +1,15 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'navigation', ['$scope', function( $scope ) {
+app.controller( 'navigation', ['$scope', '$location', function( $scope, $location ) {
     $scope.menu = [
+        { link: '/home',         translate: 'navigation.home' },
         { link: '/banner',       translate: 'navigation.banner' },
         { link: '/presentation', translate: 'navigation.presentation' },
         { link: '/education',    translate: 'navigation.education' },
         { link: '/skills',       translate: 'navigation.skills' },
         { link: '/experiences',  translate: 'navigation.experiences' },
-        { link: '/hobbies',      translate: 'navigation.hobbies' }
+        { link: '/hobbies',      translate: 'navigation.hobbies' },
+        { link: '/contact',      translate: 'navigation.contact' }
     ];
 
     $scope.setActive = function( index ) {
@@ -24,5 +26,5 @@ app.controller( 'navigation', ['$scope', function( $scope ) {
 
     };
 
-    $scope.setActive( '/banner' );
+    $scope.setActive( $location.path());
 }]);

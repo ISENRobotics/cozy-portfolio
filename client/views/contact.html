@@ -1,0 +1,18 @@
+<div class="wrapper-center" >
+    <form class="container" >
+        <div class="row" >
+            <div class="col s12 m12 l12" >
+                <h2>{{ 'navigation.contact' | translate }}</h2>
+            </div>
+        </div>
+
+        <div class="row" >
+            <div class="col s12 m12 l12" >
+                <div class="input-field" >
+                    <input type="text" ng-model="contact.email" ng-class="{ 'not-empty': !!contact.email }" />
+                    <label>{{ 'contact.email' | translate }}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

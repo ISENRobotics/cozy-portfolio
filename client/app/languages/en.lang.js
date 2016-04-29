@@ -10,32 +10,54 @@ module.exports = {
         "experiences": "Experiences",
         "hobbies": "Hobbies",
         "banner": "Banner",
-        "save": "Save"
+        "save": "Save",
+        "contact": "Contact",
+        "home": "Home"
     },
 
     "banner": {
-        "title": "lorem ipsum (title)",
-        "url": "lorem ipsum (url)",
-        "validate": "Validate"
+        "title": "Title of your banner",
+        "url": "URL of your banner's image"
     },
 
     "presentation": {
-        "title": "lorem ipsum (title)",
-        "content": "lorem ipsum (content)",
-        "validate": "Validate"
+        "title": "Title of your presentation",
+        "content": "Content of your presentation",
     },
 
     "education": {
-        "title": "lorem ipsum (title)",
-        "date": "lorem ipsum (date)",
-        "content": "lorem ipsum (content)",
+        "title": "Title of your education",
+        "date": "Date that you were in",
+        "content": "Description of your education",
         "name": "Education"
     },
 
     "experience": {
-        "title": "lorem ipsum (title)",
-        "date": "lorem ipsum (date)",
-        "content": "lorem ipsum (content)",
+        "title": "Title of your experience",
+        "date": "Date you were in",
+        "content": "Description",
         "name": "Experience"
+    },
+
+    "hobbie": {
+        "category": "Name of your hobbie",
+        "content": "Description",
+        "name": "Hobbie"
+    },
+
+    "skill": {
+        "category": "Name of your skill",
+        "content": "Description",
+        "name": "Skill"
+    },
+
+    "contact": {
+        "email": "Email was send message"
+    },
+
+    "home": {
+        "content":
+            "<h3 class='line' >Hello</h3>" +
+            "<p>Better functionnalities coming soon !</p>"
     }
 };
