@@ -17,7 +17,13 @@
 var rest = require('./rest');
 
 module.exports = {
-    ':resource' : {
+    'portfolio' : {
+        get: rest.getAll,
+        delete: rest.deleteAll,
+        post: rest.update,
+        put: rest.update
+    },
+    'portfolio/:resource' : {
         get: rest.get,
         post: rest.update,
         delete: rest.delete,
