@@ -9,7 +9,8 @@ app.controller( 'navigation', ['$scope', '$location', function( $scope, $locatio
         { link: '/skills',       translate: 'navigation.skills' },
         { link: '/experiences',  translate: 'navigation.experiences' },
         { link: '/hobbies',      translate: 'navigation.hobbies' },
-        { link: '/contact',      translate: 'navigation.contact' }
+        { link: '/contact',      translate: 'navigation.contact' },
+        { link: '/settings',     translate: 'navigation.settings' }
     ];
 
     $scope.setActive = function( index ) {

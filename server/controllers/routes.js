@@ -19,7 +19,7 @@ var rest = require('./rest');
 module.exports = {
     ':resource' : {
         get: rest.get,
-        post: rest.post,
+        post: rest.update,
         delete: rest.delete,
         put: rest.update
     }
