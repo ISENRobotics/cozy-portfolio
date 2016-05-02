@@ -5,7 +5,7 @@ app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
 
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
-    $http.get( 'portfolio/education' ).then( function( res ) {
+    $http.get( 'portfolio/educations' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
             $scope.educations = res.data[0];
         }
@@ -14,7 +14,7 @@ app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/education', $scope.educations ).then( function( res ) {
+        $http.post( 'portfolio/educations', $scope.educations ).then( function( res ) {
             if( res.status != 200 ) {
                 // insert error logs here
             }

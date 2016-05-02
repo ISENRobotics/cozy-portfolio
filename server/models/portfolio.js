@@ -27,7 +27,13 @@ var portfolio = cozydb.getModel('portfolio', {
         type: Object
     },
 
-    'education': {
+    'educations': {
+        default: [],
+
+        type: Array
+    },
+
+    'skills': {
         default: [],
 
         type: Array
