@@ -2,16 +2,16 @@ var logger = require( '../models/logger' );
 var cozyinstance = require('../models/cozyinstance');
 
 var getLocale = function( callback ) {
-    cozyinstance.request('all', function(err, instance) {
+    cozyinstance.request('all', function(err, instances) {
         if(err) {
             /* If error, log and return it */
             logger.error( err.message );
             callback( err );
-        } else if ( !instance ) {
+        } else if ( !instances ) {
             logger.info( "Oups ! Cannot find cozyinstance ! :S" );
         } else {
             logger.info( "Return locale" );
-            callback( null, " "+instance );
+            callback( null, instances[0] );
         }
     });
 };
