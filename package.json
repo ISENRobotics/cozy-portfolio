@@ -73,6 +73,9 @@
     "User": {
       "description": "User's data are required to fill your portfolio"
     },
+    "Cozyinstance": {
+        "description": "Needs locale to know which language to use"
+    },
     "Portfolio": {
       "description": "Needs access to portfolio data"
     }
