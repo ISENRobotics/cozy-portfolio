@@ -3,7 +3,7 @@
 app.config(["$translateProvider", function( $translateProvider ) {
     // ----------------------------------------------------------------------------
     // declaration languages
-    var languages    = ['en', 'fr'];
+    var languages    = ['en'];
     var translations = {};
 
     // ----------------------------------------------------------------------------

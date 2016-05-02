@@ -9,7 +9,7 @@
         <div class="row" >
             <div class="col s12 m12 l12" >
                 <div class="input-field" >
-                    <input type="text" ng-model="presentation.title" ng-class="{ 'not-empty': !!presentation.title }" />
+                    <input type="text" ng-model="presentation.title" ng-change="change()" ng-class="{ 'not-empty': !!presentation.title }" />
                     <label>{{ 'presentation.title' | translate }}</label>
                 </div>
             </div>
@@ -18,7 +18,7 @@
         <div class="row" >
             <div class="col s12 m12 l12" >
                 <div class="input-field" >
-                    <textarea rows="10" name="content" ng-model="presentation.content" ng-class="{ 'not-empty': !!presentation.content }" ></textarea>
+                    <textarea rows="10" name="content" ng-model="presentation.content" ng-change="change()" ng-class="{ 'not-empty': !!presentation.content }" ></textarea>
                     <label>{{ 'presentation.content' | translate }}</label>
                 </div>
             </div>
