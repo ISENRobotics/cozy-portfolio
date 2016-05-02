@@ -61,6 +61,7 @@
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.1",
     "cozydb": "^0.1.11",
+    "empty-value": "^1.0.1",
     "helmet": "^2.0.0",
     "morgan": "^1.7.0",
     "normalize-css": "^2.3.1",

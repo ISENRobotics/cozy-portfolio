@@ -8,20 +8,31 @@ var portfolio = cozydb.getModel('portfolio', {
             content: "Mon portfolio",
             avatar: ""
         },
+
         type: Object
     },
-    'presentation' : {
+
+    'presentation': {
         default: {
             title: "Qui suis-je ?",
             content: "Je m'appelle INSERER UN NOM ICI, je suis ...."
         },
+
         type: Object
     },
-    'contact' : {
-        default: {
-            title: "yolo"
-        }
+
+    'contact': {
+        default: {},
+
+        type: Object
     },
+
+    'education': {
+        default: [],
+
+        type: Array
+    },
+
     type: Object
 });
 
