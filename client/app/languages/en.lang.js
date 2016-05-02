@@ -18,7 +18,9 @@ module.exports = {
 
     "banner": {
         "title": "Title of your banner",
-        "url": "URL of your banner's image"
+        "content": "Content to display on your banner",
+        "avatar": "Avatar to show on your banner",
+        "icon": "Icon to show in the tab of your web browser"
     },
 
     "presentation": {
