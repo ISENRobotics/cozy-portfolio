@@ -2,7 +2,7 @@ var logger = require( '../models/logger' );
 var cozyinstance = require('../models/cozyinstance');
 
 /* config */
-var defaultLocale = "en";
+var defaultLocale = 'en';
 
 var getLocale = function( callback ) {
     cozyinstance.request('all', function(err, instances) {
@@ -11,9 +11,9 @@ var getLocale = function( callback ) {
             logger.error( err.message );
             callback( err );
         } else if ( !instances ) {
-            logger.info( "Oups ! Cannot find cozyinstance ! :S" );
+            logger.info( 'Oups ! Cannot find cozyinstance ! :S' );
         } else {
-            logger.info( "Return locale" );
+            logger.info( 'Return locale from cozyinstance' );
 
             if( !instances[0] ) {
                 callback( null, defaultLocale );
@@ -23,7 +23,8 @@ var getLocale = function( callback ) {
                     callback( null, defaultLocale );
                 }
                 else {
-                    var locale = "";
+                    /* If locale exists, we have to parse all letters together */
+                    var locale = '';
                     for (var i in instances[0].locale) {
                         locale += instances[0].locale[i];
                     }
