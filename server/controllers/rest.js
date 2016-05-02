@@ -43,7 +43,7 @@ var resetPortfolio = function( callback ) {
         } else {
             /* Delete portfolio, then create a new */
             logger.info( "Delete portfolio" );
-            if( portfolios[1] ) {
+            if( portfolios.length > 2 ) {
                 /* If a second portfolio exists, we got problems ... */
                 logger.error( "More than ONE portfolio ... not possible !!!");
             }
@@ -89,13 +89,17 @@ var updateResource = function( req, callback ) {
         } else {
             /* Create a json with : Resource:dataReceived . Update it */
             var newData = {};
-            newData[ req.params.resource ] = req.body;
+            if( req.params.resource ) {
+                newData[ req.params.resource ] = req.body;
+            } else {
+                newData = req.body;
+            }
             portfolio.updateAttributes( newData, function(err, dataUpdated) {
                 if(err) {
                     logger.error( err.message );
                     callback( err );
                 } else {
-                    logger.info( "Update attributes for : " + req.params.resource );
+                    logger.info( "Update attributes for : " + ( req.params.resource || "all" ) );
                     callback( null, dataUpdated );
                 }
             });
@@ -114,16 +118,6 @@ module.exports = {
             }
         });
     },
-    delete: function( req, res ) {
-        /* reset the portfolio */
-        resetPortfolio( function( err, portfolio ) {
-            if(err) {
-                res.sendStatus(500);
-            } else {
-                res.json( portfolio );
-            }
-        });
-    },
     update: function( req, res ) {
         /* replace the actual content of resource by the req.body */
         updateResource( req, function( err, dataUpdated ) {
@@ -131,6 +125,26 @@ module.exports = {
                 res.sendStatus(500);
             } else {
                 res.json( dataUpdated );
+            }
+        });
+    },
+    getAll: function( req, res ) {
+        /* get the portfolio and return it */
+        getPortfolio( function( err, portfolio ) {
+            if(err) {
+                res.sendStatus(500);
+            } else {
+                res.json( portfolio );
+            }
+        });
+    },
+    deleteAll: function( req, res ) {
+        /* reset the portfolio */
+        resetPortfolio( function( err, portfolio ) {
+            if(err) {
+                res.sendStatus(500);
+            } else {
+                res.json( portfolio );
             }
         });
     }
