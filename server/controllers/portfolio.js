@@ -9,7 +9,7 @@ var getPortfolio = function( callback ) {
             callback( err );
         } else if ( !portfolios[0] ) {
             /* If no portfolio exists actually, init portfolio */
-            logger.info( "Cannot find any portfolio, trying to initialize one ..." );
+            logger.info( 'Cannot find any portfolio, trying to initialize one ...' );
             resetPortfolio( function( err, portfolio ) {
                 if(err) {
                     callback( err );
@@ -19,7 +19,7 @@ var getPortfolio = function( callback ) {
             });
         } else {
             /* If portfolio exists, log and return it */
-            logger.info( "Successfully found portfolio" );
+            logger.info( 'Successfully found portfolio' );
             callback( null, portfolios[0] );
         }
     });
@@ -42,10 +42,10 @@ var resetPortfolio = function( callback ) {
             });
         } else {
             /* Delete portfolio, then create a new */
-            logger.info( "Delete portfolio" );
+            logger.info( 'Delete portfolio' );
             if( portfolios.length > 2 ) {
                 /* If a second portfolio exists, we got problems ... */
-                logger.error( "More than ONE portfolio ... not possible !!!");
+                logger.error( 'More than ONE portfolio ... not possible !!!');
             }
             /* destroy portfolio 0 and rebuild a new */
             pfolio.destroy( portfolios[0].id, function( err ) {
@@ -53,7 +53,7 @@ var resetPortfolio = function( callback ) {
                     logger.error( err.message );
                     callback( err );
                 } else {
-                    logger.info( "Portfolio deleted" );
+                    logger.info( 'Portfolio deleted' );
                     createThePortfolio( function( err, portfolio ) {
                         if(err) {
                             callback( err );
@@ -74,7 +74,7 @@ var createThePortfolio = function( callback ) {
             logger.error( err.message );
             callback( err );
         } else {
-            logger.info( "Portfolio created" );
+            logger.info( 'Portfolio created' );
             callback( null, portfolio );
         }
     });
@@ -99,7 +99,7 @@ var updateResource = function( req, callback ) {
                     logger.error( err.message );
                     callback( err );
                 } else {
-                    logger.info( "Update attributes for : " + ( req.params.resource || "all" ) );
+                    logger.info( 'Update attributes for : ' + ( req.params.resource || 'all' ) );
                     callback( null, dataUpdated );
                 }
             });

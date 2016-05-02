@@ -14,18 +14,22 @@
 //    }
 // }
 
-var rest = require('./rest');
+var portfolio   = require( './portfolio' );
+var user        = require( './user' );
 
 module.exports = {
     'portfolio' : {
-        get: rest.getAll,
-        delete: rest.deleteAll,
-        post: rest.update,
-        put: rest.update
+        get: portfolio.getAll,
+        delete: portfolio.deleteAll,
+        post: portfolio.update,
+        put: portfolio.update
     },
     'portfolio/:resource' : {
-        get: rest.get,
-        post: rest.update,
-        put: rest.update
+        get: portfolio.get,
+        post: portfolio.update,
+        put: portfolio.update
+    },
+    'user/cozylocale' : {
+        get: user.getLocale
     }
 };
