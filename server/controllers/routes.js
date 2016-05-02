@@ -26,7 +26,6 @@ module.exports = {
     'portfolio/:resource' : {
         get: rest.get,
         post: rest.update,
-        delete: rest.delete,
         put: rest.update
     }
 };

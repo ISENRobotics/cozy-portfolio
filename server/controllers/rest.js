@@ -118,16 +118,6 @@ module.exports = {
             }
         });
     },
-    delete: function( req, res ) {
-        /* reset the portfolio */
-        resetPortfolio( function( err, portfolio ) {
-            if(err) {
-                res.sendStatus(500);
-            } else {
-                res.json( portfolio );
-            }
-        });
-    },
     update: function( req, res ) {
         /* replace the actual content of resource by the req.body */
         updateResource( req, function( err, dataUpdated ) {
