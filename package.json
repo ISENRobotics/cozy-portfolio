@@ -1,7 +1,7 @@
 {
   "name": "cozy-portfolio",
   "cozy-displayName": "Portfolio",
-  "version": "0.4.0",
+  "version": "0.4.8",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {
@@ -43,8 +43,8 @@
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "htmlhint-stylish": "^1.0.3",
-    "jshint-stylish": "^2.1.0",
-    "nodemon": "^1.9.1",
+    "jshint-stylish": "^2.2.0",
+    "nodemon": "^1.9.2",
     "qunit-color": "^1.15.0-1",
     "vinyl-named": "^1.1.0",
     "walk": "^2.3.9",
@@ -61,7 +61,7 @@
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.1",
     "cozydb": "^0.1.11",
-    "helmet": "^1.3.0",
+    "helmet": "^2.0.0",
     "morgan": "^1.7.0",
     "normalize-css": "^2.3.1",
     "printit": "^0.1.20",
@@ -74,7 +74,7 @@
       "description": "User's data are required to fill your portfolio"
     },
     "Cozyinstance": {
-        "description": "Needs locale to know which language to use"
+      "description": "Needs locale to know which language to use"
     },
     "Portfolio": {
       "description": "Needs access to portfolio data"
