@@ -37,13 +37,14 @@ extensions.push( cparser( secret ));
 // Bind static routes
 logger.info( 'Load static routes' );
 var routes = [
-    { syml: '/vendor/angular', real: 'node_modules/angular' },
-    { syml: '/vendor/angular', real: 'node_modules/angular-aria' },
-    { syml: '/vendor/angular', real: 'node_modules/angular-route' },
-    { syml: '/vendor/angular', real: 'node_modules/angular-sanitize' },
-    { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
-    { syml: '/stylesheets',    real: 'node_modules/normalize-css' },
-    { syml: '/',               real: 'client/' }
+    { syml: '/vendor/angular',   real: 'node_modules/angular' },
+    { syml: '/vendor/angular',   real: 'node_modules/angular-aria' },
+    { syml: '/vendor/angular',   real: 'node_modules/angular-route' },
+    { syml: '/vendor/angular',   real: 'node_modules/angular-sanitize' },
+    { syml: '/vendor/angular',   real: 'node_modules/angular-translate/dist' },
+    { syml: '/stylesheets',      real: 'node_modules/normalize-css' },
+    { syml: '/',                 real: 'client/' },
+    { syml: '/public/portfolio', real: 'client/public/templates/default' }
 ];
 
 for( var i in routes ) {

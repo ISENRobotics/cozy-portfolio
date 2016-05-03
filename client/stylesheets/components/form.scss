@@ -76,6 +76,8 @@ button, .button, input[type=button] {
 
     cursor: pointer;
 
+    text-align: center;
+
     min-height: 40px;
 
     color: $white;
@@ -91,6 +93,7 @@ button, .button, input[type=button] {
 
     &:hover, &:active {
         background-color: $dark-blue;
+        color: $white;
     }
 
     &.success {

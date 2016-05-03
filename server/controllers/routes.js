@@ -32,6 +32,10 @@ module.exports = {
         put: portfolio.update
     },
 
+    'public/portfolio/:resource' : {
+        get: portfolio.get
+    },
+
     'user/cozylocale' : {
         get: user.getLocale
     },
