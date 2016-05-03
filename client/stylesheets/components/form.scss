@@ -91,7 +91,7 @@ button, .button, input[type=button] {
         width: calc( 100% - #{ $space * 2 });
     }
 
-    &:hover, &:active {
+    &:hover, &:active, &:visited {
         background-color: $dark-blue;
         color: $white;
     }
