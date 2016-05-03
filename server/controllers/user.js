@@ -56,7 +56,11 @@ var getUserResource = function( resource, callback ) {
                 }
                 else {
                     /* Return email */
-                    callback( null, users[0][resource] );
+                    var string = '';
+                    for (var i in users[0][resource]) {
+                        string += users[0][resource][i];
+                    }
+                    callback( null, string );
                 }
             }
         }
