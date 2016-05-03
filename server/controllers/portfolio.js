@@ -94,13 +94,13 @@ var updateResource = function( req, callback ) {
             } else {
                 newData = req.body;
             }
-            portfolio.updateAttributes( newData, function(err, dataUpdated) {
+            portfolio.updateAttributes( newData, function(err) {
                 if(err) {
                     logger.error( err.message );
                     callback( err );
                 } else {
                     logger.info( 'Update attributes for : ' + ( req.params.resource || 'all' ) );
-                    callback( null, dataUpdated );
+                    callback( null );
                 }
             });
         }
@@ -120,11 +120,11 @@ module.exports = {
     },
     update: function( req, res ) {
         /* replace the actual content of resource by the req.body */
-        updateResource( req, function( err, dataUpdated ) {
+        updateResource( req, function( err ) {
             if(err) {
                 res.sendStatus(500);
             } else {
-                res.json( dataUpdated );
+                res.sendStatus(200);
             }
         });
     },
@@ -140,11 +140,11 @@ module.exports = {
     },
     deleteAll: function( req, res ) {
         /* reset the portfolio */
-        resetPortfolio( function( err, portfolio ) {
+        resetPortfolio( function( err ) {
             if(err) {
                 res.sendStatus(500);
             } else {
-                res.json( portfolio );
+                res.sendStatus(200);
             }
         });
     }
