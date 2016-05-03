@@ -60,7 +60,7 @@ module.exports = {
 
     "home": {
         "content":
-            "<h3 class='line' >bonjour</h3>" +
+            "<h3 class='line' >Bonjour !</h3>" +
             "<p>De nouvelles fonctionnalités viendront bientot !</p>"
     },
 
