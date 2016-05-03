@@ -33,7 +33,6 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
         }
 
         $scope.skills.push( element );
-        $scope.change();
     };
 
     // ----------------------------------------------------------------------------
