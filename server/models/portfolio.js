@@ -1,27 +1,56 @@
 var cozydb = require('cozydb');
 
-var portfolio = cozydb.getModel('portfolio', {
+var portfolio = cozydb.getModel( 'portfolio', {
     'banner': {
         default: {
-            title: "John Doe - Portfolio",
-            icon: "",
-            content: "Mon portfolio",
-            avatar: ""
+            title: '',
+            icon: '',
+            content: '',
+            avatar: ''
         },
+
         type: Object
     },
-    'presentation' : {
+
+    'presentation': {
         default: {
-            title: "Qui suis-je ?",
-            content: "Je m'appelle INSERER UN NOM ICI, je suis ...."
+            title: '',
+            content: ''
         },
+
         type: Object
     },
-    'contact' : {
-        default: {
-            title: "yolo"
-        }
+
+    'contact': {
+        default: {},
+
+        type: Object
     },
+
+    'educations': {
+        default: [],
+
+        type: Array
+    },
+
+    'experiences': {
+        default: [],
+
+        type: Array
+    },
+
+    'hobbies': {
+        default: [],
+
+        type: Array
+    },
+
+    'skills': {
+        default: [],
+
+        type: Array
+    },
+
     type: Object
 });
 

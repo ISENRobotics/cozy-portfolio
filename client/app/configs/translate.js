@@ -18,7 +18,7 @@ app.config(["$translateProvider", function( $translateProvider ) {
         $translateProvider.translations( i, translations[i] );
     }
 
-    $translateProvider.useSanitizeValueStrategy( 'sanitize' );
+    $translateProvider.useSanitizeValueStrategy( null );
     $translateProvider.preferredLanguage( 'en' );
     $translateProvider.fallbackLanguage( 'en' );
 }]);

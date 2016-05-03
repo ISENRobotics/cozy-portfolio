@@ -15,14 +15,14 @@
         <div class="row">
             <div class="col s12 m6 l6">
                 <div class="input-field">
-                    <input type="text" ng-model="education.date" ng-class="{ 'not-empty': !!education.date }" />
+                    <input type="text" ng-model="education.date" ng-change="change()" ng-class="{ 'not-empty': !!education.date }" />
                     <label>{{ 'education.date' | translate }}</label>
                 </div>
             </div>
 
             <div class="col s12 m6 l6">
                 <div class="input-field">
-                    <input type="text" ng-model="education.title" ng-class="{ 'not-empty': !!education.title }" />
+                    <input type="text" ng-model="education.title" ng-change="change()" ng-class="{ 'not-empty': !!education.title }" />
                     <label>{{ 'education.title' | translate }}</label>
                 </div>
             </div>
@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="input-field">
-                    <textarea rows="4" ng-model="education.content" ng-class="{ 'not-empty': !!education.content }" ></textarea>
+                    <textarea rows="4" ng-model="education.content" ng-change="change()" ng-class="{ 'not-empty': !!education.content }" ></textarea>
                     <label>{{ 'education.content' | translate }}</label>
                 </div>
             </div>

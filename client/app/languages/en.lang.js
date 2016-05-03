@@ -10,15 +10,18 @@ module.exports = {
         "experiences": "Experiences",
         "hobbies": "Hobbies",
         "banner": "Banner",
-        "save": "Save",
+        "save": "View",
         "contact": "Contact",
         "home": "Home",
-        "settings": "Settings"
+        "settings": "Settings",
+        "isen": "ISEN"
     },
 
     "banner": {
         "title": "Title of your banner",
-        "url": "URL of your banner's image"
+        "content": "Content to display on your banner",
+        "avatar": "Avatar to show on your banner",
+        "icon": "Icon to show in the tab of your web browser"
     },
 
     "presentation": {
@@ -58,11 +61,17 @@ module.exports = {
 
     "home": {
         "content":
-            "<h3 class='line' >Hello</h3>" +
+            "<h3 class='line' >Welcome !</h3>" +
             "<p>Better functionnalities coming soon !</p>"
     },
 
+    "isen": {
+        "name": "ISEN"
+    },
+
     "settings": {
-        "name": "Settings"
+        "name": "Settings",
+        "theme": "Template to use",
+        "pick": "Pick one"
     }
 };

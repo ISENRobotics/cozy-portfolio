@@ -1,7 +1,25 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'skills', ['$scope', function( $scope ) {
+app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     $scope.skills = [];
+
+    // ----------------------------------------------------------------------------
+    // get data provide by cozydb
+    $http.get( 'portfolio/skills' ).then( function( res ) {
+        if( res.status == 200 && !require( 'empty-value' )( res.data )) {
+            $scope.skills = res.data[0];
+        }
+    });
+
+    // ----------------------------------------------------------------------------
+    // ng change listener
+    $scope.change = function() {
+        $http.post( 'portfolio/skills', $scope.skills ).then( function( res ) {
+            if( res.status != 200 ) {
+                // insert error logs here
+            }
+        });
+    };
 
     // ----------------------------------------------------------------------------
     // add an element
@@ -27,7 +45,11 @@ app.controller( 'skills', ['$scope', function( $scope ) {
         if( !$scope.skills.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
+    // ----------------------------------------------------------------------------
+    // default
     $scope.add();
 }]);

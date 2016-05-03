@@ -1,7 +1,25 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'education', ['$scope', function( $scope ) {
+app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
     $scope.educations = [];
+
+    // ----------------------------------------------------------------------------
+    // get data provide by cozydb
+    $http.get( 'portfolio/educations' ).then( function( res ) {
+        if( res.status == 200 && !require( 'empty-value' )( res.data )) {
+            $scope.educations = res.data[0];
+        }
+    });
+
+    // ----------------------------------------------------------------------------
+    // ng change listener
+    $scope.change = function() {
+        $http.post( 'portfolio/educations', $scope.educations ).then( function( res ) {
+            if( res.status != 200 ) {
+                // insert error logs here
+            }
+        });
+    };
 
     // ----------------------------------------------------------------------------
     // add an element
@@ -27,7 +45,11 @@ app.controller( 'education', ['$scope', function( $scope ) {
         if( !$scope.educations.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
+    // ----------------------------------------------------------------------------
+    // default case
     $scope.add();
 }]);

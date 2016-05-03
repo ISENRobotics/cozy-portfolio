@@ -1,7 +1,25 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'experiences', ['$scope', function( $scope ) {
+app.controller( 'experiences', ['$scope', '$http', function( $scope, $http ) {
     $scope.experiences = [];
+
+    // ----------------------------------------------------------------------------
+    // get data provide by cozydb
+    $http.get( 'portfolio/experiences' ).then( function( res ) {
+        if( res.status == 200 && !require( 'empty-value' )( res.data )) {
+            $scope.experiences = res.data[0];
+        }
+    });
+
+    // ----------------------------------------------------------------------------
+    // ng change listener
+    $scope.change = function() {
+        $http.post( 'portfolio/experiences', $scope.experiences ).then( function( res ) {
+            if( res.status != 200 ) {
+                // insert error logs here
+            }
+        });
+    };
 
     // ----------------------------------------------------------------------------
     // add an element
@@ -27,7 +45,11 @@ app.controller( 'experiences', ['$scope', function( $scope ) {
         if( !$scope.experiences.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
+    // ----------------------------------------------------------------------------
+    // default case
     $scope.add();
 }]);
