@@ -10,8 +10,8 @@ app.controller( 'navigation', ['$scope', '$location', function( $scope, $locatio
         { link: '/experiences',  translate: 'navigation.experiences' },
         { link: '/hobbies',      translate: 'navigation.hobbies' },
         { link: '/contact',      translate: 'navigation.contact' },
-        { link: '/isen',         translate: 'navigation.isen' },
-        { link: '/settings',     translate: 'navigation.settings' }
+        { link: '/isen',         translate: 'navigation.isen' }
+        // { link: '/settings',     translate: 'navigation.settings' }
     ];
 
     $scope.setActive = function( index ) {

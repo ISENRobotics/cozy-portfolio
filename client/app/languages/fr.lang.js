@@ -70,6 +70,8 @@ module.exports = {
     },
 
     "settings": {
-        "name": "Paramètres"
+        "name": "Paramètres",
+        "theme": "Modéle à utiliser",
+        "pick": "Sélectionnez-en un"
     }
 };

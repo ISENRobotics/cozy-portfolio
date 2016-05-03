@@ -28,7 +28,7 @@
         line-height: 1.4;
     }
 
-    & > input[type=text], & > textarea {
+    & > input[type=text], & > textarea, & > select {
         display: inline-block;
 
         width: calc( 100% - #{ $space * 2 });
@@ -38,6 +38,7 @@
 
         border: none;
         border-bottom: 2px solid $light-blue;
+        background-color: transparent;
 
         transition: border-bottom $transition-time;
 

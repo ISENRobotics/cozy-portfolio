@@ -14,8 +14,9 @@
 //    }
 // }
 
-var portfolio   = require( './portfolio' );
-var user        = require( './user' );
+var portfolio = require( './portfolio' );
+var user      = require( './user' );
+var themes    = require( './themes' );
 
 module.exports = {
     'portfolio' : {
@@ -24,18 +25,26 @@ module.exports = {
         post: portfolio.update,
         put: portfolio.update
     },
+
     'portfolio/:resource' : {
         get: portfolio.get,
         post: portfolio.update,
         put: portfolio.update
     },
+
     'user/cozylocale' : {
         get: user.getLocale
     },
+
     'user/email' : {
         get: user.getEmail
     },
+
     'user/public_name' : {
         get: user.getPublicName
+    },
+
+    'themes' : {
+        get: themes.get
     }
 };
