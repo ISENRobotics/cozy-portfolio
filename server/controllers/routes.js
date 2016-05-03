@@ -31,5 +31,11 @@ module.exports = {
     },
     'user/cozylocale' : {
         get: user.getLocale
+    },
+    'user/email' : {
+        get: user.getEmail
+    },
+    'user/public_name' : {
+        get: user.getPublicName
     }
 };
