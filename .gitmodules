@@ -1,3 +1,0 @@
-[submodule "client/public/templates/default"]
-	path = client/public/templates/default
-	url = https://github.com/ISENRobotics/cozy-portfolio-theme.git
