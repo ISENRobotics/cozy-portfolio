@@ -1,7 +1,25 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'hobbies', ['$scope', function( $scope ) {
+app.controller( 'hobbies', ['$scope', '$http', function( $scope, $http ) {
     $scope.hobbies = [];
+
+    // ----------------------------------------------------------------------------
+    // get data provide by cozydb
+    $http.get( 'portfolio/hobbies' ).then( function( res ) {
+        if( res.status == 200 && !require( 'empty-value' )( res.data )) {
+            $scope.hobbies = res.data[0];
+        }
+    });
+
+    // ----------------------------------------------------------------------------
+    // ng change listener
+    $scope.change = function() {
+        $http.post( 'portfolio/hobbies', $scope.hobbies ).then( function( res ) {
+            if( res.status != 200 ) {
+                // insert error logs here
+            }
+        });
+    };
 
     // ----------------------------------------------------------------------------
     // add an element
@@ -27,7 +45,11 @@ app.controller( 'hobbies', ['$scope', function( $scope ) {
         if( !$scope.hobbies.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
+    // ----------------------------------------------------------------------------
+    // default case
     $scope.add();
 }]);

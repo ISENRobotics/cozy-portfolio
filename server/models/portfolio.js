@@ -1,12 +1,12 @@
 var cozydb = require('cozydb');
 
-var portfolio = cozydb.getModel('portfolio', {
+var portfolio = cozydb.getModel( 'portfolio', {
     'banner': {
         default: {
-            title: "John Doe - Portfolio",
-            icon: "",
-            content: "Mon portfolio",
-            avatar: ""
+            title: '',
+            icon: '',
+            content: '',
+            avatar: ''
         },
 
         type: Object
@@ -14,8 +14,8 @@ var portfolio = cozydb.getModel('portfolio', {
 
     'presentation': {
         default: {
-            title: "Qui suis-je ?",
-            content: "Je m'appelle INSERER UN NOM ICI, je suis ...."
+            title: '',
+            content: ''
         },
 
         type: Object
@@ -28,6 +28,18 @@ var portfolio = cozydb.getModel('portfolio', {
     },
 
     'educations': {
+        default: [],
+
+        type: Array
+    },
+
+    'experiences': {
+        default: [],
+
+        type: Array
+    },
+
+    'hobbies': {
         default: [],
 
         type: Array

@@ -7,7 +7,7 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     // get data provide by cozydb
     $http.get( 'portfolio/skills' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
-           $scope.skills = res.data[0];
+            $scope.skills = res.data[0];
         }
     });
 
@@ -33,6 +33,7 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
         }
 
         $scope.skills.push( element );
+        $scope.change();
     };
 
     // ----------------------------------------------------------------------------
@@ -45,6 +46,8 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
         if( !$scope.skills.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
     // ----------------------------------------------------------------------------

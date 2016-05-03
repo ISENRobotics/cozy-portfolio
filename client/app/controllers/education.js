@@ -45,6 +45,8 @@ app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
         if( !$scope.educations.length ) {
             $scope.add();
         }
+
+        $scope.change();
     };
 
     // ----------------------------------------------------------------------------
