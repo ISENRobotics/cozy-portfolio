@@ -13,7 +13,8 @@ module.exports = {
         "save": "View",
         "contact": "Contact",
         "home": "Home",
-        "settings": "Settings"
+        "settings": "Settings",
+        "isen": "ISEN"
     },
 
     "banner": {
@@ -62,6 +63,10 @@ module.exports = {
         "content":
             "<h3 class='line' >Welcome !</h3>" +
             "<p>Better functionnalities coming soon !</p>"
+    },
+
+    "isen": {
+        "name": "ISEN"
     },
 
     "settings": {
