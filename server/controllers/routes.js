@@ -48,6 +48,10 @@ module.exports = {
         get: user.getPublicName
     },
 
+    'public/user/public_name' : {
+        get: user.getPublicName
+    },
+
     'themes' : {
         get: themes.get
     }
