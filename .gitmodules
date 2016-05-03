@@ -1,0 +1,4 @@
+[submodule "client/public/templates/default"]
+	path = client/public/templates/default
+[submodule "client/public/templates/default"]
+	url = https://github.com/FlorentinDUBOIS/cozy-portfolio-theme.git
