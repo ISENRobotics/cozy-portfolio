@@ -10,7 +10,7 @@ module.exports = {
         "experiences": "Experiences",
         "hobbies": "Hobbies",
         "banner": "Banner",
-        "save": "Save",
+        "save": "View",
         "contact": "Contact",
         "home": "Home",
         "settings": "Settings"

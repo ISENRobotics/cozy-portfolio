@@ -3,7 +3,7 @@
 app.config(["$translateProvider", function( $translateProvider ) {
     // ----------------------------------------------------------------------------
     // declaration languages
-    var languages    = ['en'];
+    var languages    = ['en', 'fr'];
     var translations = {};
 
     // ----------------------------------------------------------------------------
@@ -18,7 +18,7 @@ app.config(["$translateProvider", function( $translateProvider ) {
         $translateProvider.translations( i, translations[i] );
     }
 
-    $translateProvider.useSanitizeValueStrategy( 'sanitize' );
+    $translateProvider.useSanitizeValueStrategy( null );
     $translateProvider.preferredLanguage( 'en' );
     $translateProvider.fallbackLanguage( 'en' );
 }]);
