@@ -2,21 +2,13 @@ var cozydb = require('cozydb');
 
 var portfolio = cozydb.getModel( 'portfolio', {
     'banner': {
-        default: {
-            title: '',
-            icon: '',
-            content: '',
-            avatar: ''
-        },
+        default: {},
 
         type: Object
     },
 
     'presentation': {
-        default: {
-            title: '',
-            content: ''
-        },
+        default: {},
 
         type: Object
     },
@@ -28,27 +20,27 @@ var portfolio = cozydb.getModel( 'portfolio', {
     },
 
     'educations': {
-        default: [],
+        default: {},
 
-        type: Array
+        type: Object
     },
 
     'experiences': {
-        default: [],
+        default: {},
 
-        type: Array
+        type: Object
     },
 
     'hobbies': {
-        default: [],
+        default: {},
 
-        type: Array
+        type: Object
     },
 
     'skills': {
-        default: [],
+        default: {},
 
-        type: Array
+        type: Object
     },
 
     type: Object

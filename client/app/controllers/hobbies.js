@@ -1,20 +1,22 @@
 // ----------------------------------------------------------------------------
 // define controller
 app.controller( 'hobbies', ['$scope', '$http', function( $scope, $http ) {
-    $scope.hobbies = [];
+    $scope.data = {
+        contents: []
+    };
 
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
     $http.get( 'portfolio/hobbies' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
-            $scope.hobbies = res.data[0];
+            $scope.data = res.data;
         }
     });
 
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/hobbies', $scope.hobbies ).then( function( res ) {
+        $http.post( 'portfolio/hobbies', $scope.data ).then( function( res ) {
             if( res.status != 200 ) {
                 // insert error logs here
             }
@@ -25,24 +27,20 @@ app.controller( 'hobbies', ['$scope', '$http', function( $scope, $http ) {
     // add an element
     $scope.add = function( element ) {
         if( !element ) {
-            element = {
-                title: '',
-                date: '',
-                content:''
-            };
+            element = {};
         }
 
-        $scope.hobbies.push( element );
+        $scope.data.contents.push( element );
     };
 
     // ----------------------------------------------------------------------------
     // remove an element
     $scope.remove = function( $index ) {
-        $scope.hobbies = $scope.hobbies.filter( function( element, index ) {
+        $scope.data.contents = $scope.data.contents.filter( function( element, index ) {
             return index != $index;
         });
 
-        if( !$scope.hobbies.length ) {
+        if( !$scope.data.contents.length ) {
             $scope.add();
         }
 

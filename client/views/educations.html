@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <div ng-repeat="education in educations" >
+    <div ng-repeat="content in data.contents" >
         <div class="row">
             <div class="col s12 m12 l12">
                 <h3 class="line" >{{ 'education.name' | translate }} {{ $index }}</h3>
@@ -15,14 +15,14 @@
         <div class="row">
             <div class="col s12 m6 l6">
                 <div class="input-field">
-                    <input type="text" ng-model="education.date" ng-change="change()" ng-class="{ 'not-empty': !!education.date }" />
+                    <input type="text" ng-model="content.date" ng-change="change()" ng-class="{ 'not-empty': !!content.date }" />
                     <label>{{ 'education.date' | translate }}</label>
                 </div>
             </div>
 
             <div class="col s12 m6 l6">
                 <div class="input-field">
-                    <input type="text" ng-model="education.title" ng-change="change()" ng-class="{ 'not-empty': !!education.title }" />
+                    <input type="text" ng-model="content.title" ng-change="change()" ng-class="{ 'not-empty': !!content.title }" />
                     <label>{{ 'education.title' | translate }}</label>
                 </div>
             </div>
@@ -31,20 +31,20 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="input-field">
-                    <textarea rows="4" ng-model="education.content" ng-change="change()" ng-class="{ 'not-empty': !!education.content }" ></textarea>
+                    <textarea rows="4" ng-model="content.content" ng-change="change()" ng-class="{ 'not-empty': !!content.content }" ></textarea>
                     <label>{{ 'education.content' | translate }}</label>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col s12 m4 l2" ng-class="{ 'offset-m8 offset-l10': $index +1 != educations.length, 'offset-m4 offset-l8': $index +1 == educations.length }" >
+            <div class="col s12 m4 l2" ng-class="{ 'offset-m8 offset-l10': $index +1 != data.contents.length, 'offset-m4 offset-l8': $index +1 == data.contents.length }" >
                 <button ng-click="remove( $index )" >
                     <i class="material-icons" >remove</i>
                 </button>
             </div>
 
-            <div class="col s12 m4 l2" ng-hide="$index +1 != educations.length" >
+            <div class="col s12 m4 l2" ng-hide="$index +1 != data.contents.length" >
                 <button ng-click="add()" >
                     <i class="material-icons" >add</i>
                 </button>

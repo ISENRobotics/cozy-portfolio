@@ -1,20 +1,22 @@
 // ----------------------------------------------------------------------------
 // define controller
 app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
-    $scope.skills = [];
+    $scope.data = {
+        contents: []
+    };
 
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
     $http.get( 'portfolio/skills' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
-            $scope.skills = res.data[0];
+            $scope.data = res.data;
         }
     });
 
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/skills', $scope.skills ).then( function( res ) {
+        $http.post( 'portfolio/skills', $scope.data ).then( function( res ) {
             if( res.status != 200 ) {
                 // insert error logs here
             }
@@ -25,24 +27,20 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     // add an element
     $scope.add = function( element ) {
         if( !element ) {
-            element = {
-                title: '',
-                date: '',
-                content:''
-            };
+            element = {};
         }
 
-        $scope.skills.push( element );
+        $scope.data.contents.push( element );
     };
 
     // ----------------------------------------------------------------------------
     // remove an element
     $scope.remove = function( $index ) {
-        $scope.skills = $scope.skills.filter( function( element, index ) {
+        $scope.data.contents = $scope.data.contents.filter( function( element, index ) {
             return index != $index;
         });
 
-        if( !$scope.skills.length ) {
+        if( !$scope.data.contents.length ) {
             $scope.add();
         }
 
@@ -50,6 +48,6 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     };
 
     // ----------------------------------------------------------------------------
-    // default
+    // default case
     $scope.add();
 }]);
