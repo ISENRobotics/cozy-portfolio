@@ -8,13 +8,15 @@ node_js:
   - "0.12"
   - "0.10"
 
+before_script:
+    - npm run-script start
+
 script:
     - npm run-script lint
     - npm run-script test
-    
+
 after_success:
     - export BUILD_RESULT="SUCCESS"
 
 after_failure:
     - export BUILD_RESULT="ERRORED"
-    
