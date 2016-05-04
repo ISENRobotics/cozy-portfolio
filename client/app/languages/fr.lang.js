@@ -13,8 +13,7 @@ module.exports = {
         "save": "Aperçu",
         "contact": "Contact",
         "home": "Accueil",
-        "settings": "Paramètres",
-        "isen": "ISEN"
+        "settings": "Paramètres"
     },
 
     "banner": {
@@ -63,10 +62,6 @@ module.exports = {
         "content":
             "<h3 class='line' >Bonjour !</h3>" +
             "<p>De nouvelles fonctionnalités viendront bientot !</p>"
-    },
-
-    "isen": {
-        "name": "ISEN"
     },
 
     "settings": {

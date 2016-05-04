@@ -7,12 +7,11 @@ app.config(["$routeProvider", function( $routeProvider ) {
         { link: '/home',         templateUrl: 'views/home.html',         controller: 'home' },
         { link: '/banner',       templateUrl: 'views/banner.html',       controller: 'banner' },
         { link: '/presentation', templateUrl: 'views/presentation.html', controller: 'presentation' },
-        { link: '/education',    templateUrl: 'views/education.html',    controller: 'education' },
+        { link: '/education',    templateUrl: 'views/educations.html',    controller: 'educations' },
         { link: '/skills',       templateUrl: 'views/skills.html',       controller: 'skills' },
         { link: '/experiences',  templateUrl: 'views/experiences.html',  controller: 'experiences' },
         { link: '/hobbies',      templateUrl: 'views/hobbies.html',      controller: 'hobbies' },
         { link: '/contact',      templateUrl: 'views/contact.html',      controller: 'contact' },
-        { link: '/isen',         templateUrl: 'views/isen.html',         controller: 'isen' },
         { link: '/settings',     templateUrl: 'views/settings.html',     controller: 'settings' }
     ];
 

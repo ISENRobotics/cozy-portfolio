@@ -1,20 +1,22 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
-    $scope.educations = [];
+app.controller( 'educations', ['$scope', '$http', function( $scope, $http ) {
+    $scope.data = {
+        contents: []
+    };
 
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
     $http.get( 'portfolio/educations' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
-            $scope.educations = res.data[0];
+            $scope.data = res.data;
         }
     });
 
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/educations', $scope.educations ).then( function( res ) {
+        $http.post( 'portfolio/educations', $scope.data ).then( function( res ) {
             if( res.status != 200 ) {
                 // insert error logs here
             }
@@ -25,24 +27,20 @@ app.controller( 'education', ['$scope', '$http', function( $scope, $http ) {
     // add an element
     $scope.add = function( element ) {
         if( !element ) {
-            element = {
-                title: '',
-                date: '',
-                content:''
-            };
+            element = {};
         }
 
-        $scope.educations.push( element );
+        $scope.data.contents.push( element );
     };
 
     // ----------------------------------------------------------------------------
     // remove an element
     $scope.remove = function( $index ) {
-        $scope.educations = $scope.educations.filter( function( element, index ) {
+        $scope.data.contents = $scope.data.contents.filter( function( element, index ) {
             return index != $index;
         });
 
-        if( !$scope.educations.length ) {
+        if( !$scope.data.contents.length ) {
             $scope.add();
         }
 
