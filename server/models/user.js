@@ -4,6 +4,7 @@ var user = cozydb.getModel('User', {
     'email' : {
         type: Object
     },
+
     'public_name' : {
         type: Object
     }

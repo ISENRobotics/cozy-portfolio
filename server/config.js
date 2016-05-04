@@ -43,7 +43,8 @@ var routes = [
     { syml: '/vendor/angular', real: 'node_modules/angular-sanitize' },
     { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
     { syml: '/stylesheets',    real: 'node_modules/normalize-css' },
-    { syml: '/',               real: 'client/' }
+    { syml: '/',               real: 'client/' },
+    { syml: '/public',         real: 'client/public/templates/default' }
 ];
 
 for( var i in routes ) {
