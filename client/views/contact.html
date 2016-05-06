@@ -6,6 +6,15 @@
             </div>
         </div>
 
+         <div class="row" >
+            <div class="col s12 m12 l12" >
+                <div class="input-field" >
+                    <input type="text" ng-model="contact.title" ng-change="change()" ng-class="{ 'not-empty': !!contact.title }" />
+                    <label>{{ 'contact.title' | translate }}</label>
+                </div>
+            </div>
+        </div>
+
         <div class="row" >
             <div class="col s12 m12 l12" >
                 <div class="input-field" >

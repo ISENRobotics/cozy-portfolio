@@ -5,7 +5,7 @@ module.exports = {
 
     "navigation": {
         "presentation": "Présentation",
-        "education": "Formation",
+        "education": "Formations",
         "skills": "Compétences",
         "experiences": "Expériences",
         "hobbies": "Loisirs",
@@ -32,30 +32,35 @@ module.exports = {
         "title": "Intitulé de votre formation",
         "date": "Date",
         "content": "Description de votre formation",
-        "name": "Formation"
+        "name": "Formation",
+        "header": "Titre sur votre portfolio"
     },
 
     "experience": {
         "title": "Sujet",
         "date": "Date",
         "content": "Description",
-        "name": "Expérience"
+        "name": "Expérience",
+        "header": "Titre sur votre portfolio"
     },
 
     "hobbie": {
         "category": "Nom de votre loisir",
         "content": "Description",
-        "name": "Loisir"
+        "name": "Loisir",
+        "header": "Titre sur votre portfolio"
     },
 
     "skill": {
         "category": "Nom de votre compétence",
         "content": "Description",
-        "name": "Compétence"
+        "name": "Compétence",
+        "header": "Titre sur votre portfolio"
     },
 
     "contact": {
-        "email": "Courriel de contact"
+        "email": "Courriel de contact",
+        "title": "Titre sur votre portfolio"
     },
 
     "home": {
