@@ -11,6 +11,10 @@ node_js:
 services:
     - couchdb
 
+env:
+    global:
+        - PORT=9200
+
 before_install:
     - travis_retry npm install npm@latest-2 -g
     - travis_retry npm install forever coffee-script -g
