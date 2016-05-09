@@ -1,20 +1,22 @@
 // ----------------------------------------------------------------------------
 // define controller
 app.controller( 'experiences', ['$scope', '$http', function( $scope, $http ) {
-    $scope.experiences = [];
+    $scope.data = {
+        contents: []
+    };
 
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
     $http.get( 'portfolio/experiences' ).then( function( res ) {
         if( res.status == 200 && !require( 'empty-value' )( res.data )) {
-            $scope.experiences = res.data[0];
+            $scope.data = res.data;
         }
     });
 
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/experiences', $scope.experiences ).then( function( res ) {
+        $http.post( 'portfolio/experiences', $scope.data ).then( function( res ) {
             if( res.status != 200 ) {
                 // insert error logs here
             }
@@ -25,24 +27,20 @@ app.controller( 'experiences', ['$scope', '$http', function( $scope, $http ) {
     // add an element
     $scope.add = function( element ) {
         if( !element ) {
-            element = {
-                title: '',
-                date: '',
-                content:''
-            };
+            element = {};
         }
 
-        $scope.experiences.push( element );
+        $scope.data.contents.push( element );
     };
 
     // ----------------------------------------------------------------------------
     // remove an element
     $scope.remove = function( $index ) {
-        $scope.experiences = $scope.experiences.filter( function( element, index ) {
+        $scope.data.contents = $scope.data.contents.filter( function( element, index ) {
             return index != $index;
         });
 
-        if( !$scope.experiences.length ) {
+        if( !$scope.data.contents.length ) {
             $scope.add();
         }
 

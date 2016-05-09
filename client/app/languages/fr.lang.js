@@ -5,7 +5,7 @@ module.exports = {
 
     "navigation": {
         "presentation": "Présentation",
-        "education": "Formation",
+        "education": "Formations",
         "skills": "Compétences",
         "experiences": "Expériences",
         "hobbies": "Loisirs",
@@ -13,19 +13,18 @@ module.exports = {
         "save": "Aperçu",
         "contact": "Contact",
         "home": "Accueil",
-        "settings": "Paramètres",
-        "isen": "ISEN"
+        "settings": "Paramètres"
     },
 
     "banner": {
-        "title": "Titre de votre bannière",
+        "header": "Titre de votre bannière",
         "content": "Contenu à afficher dans votre bannière",
         "avatar": "Avatar à afficher avec votre bannière",
         "icon": "Icone à afficher dans votre onglet de navigateur web"
     },
 
     "presentation": {
-        "title": "Titre de votre présentation",
+        "header": "Titre de votre présentation",
         "content": "Contenu de votre présentation",
     },
 
@@ -33,40 +32,41 @@ module.exports = {
         "title": "Intitulé de votre formation",
         "date": "Date",
         "content": "Description de votre formation",
-        "name": "Formation"
+        "name": "Formation",
+        "header": "Titre sur votre portfolio"
     },
 
     "experience": {
         "title": "Sujet",
         "date": "Date",
         "content": "Description",
-        "name": "Expérience"
+        "name": "Expérience",
+        "header": "Titre sur votre portfolio"
     },
 
     "hobbie": {
         "category": "Nom de votre loisir",
         "content": "Description",
-        "name": "Loisir"
+        "name": "Loisir",
+        "header": "Titre sur votre portfolio"
     },
 
     "skill": {
         "category": "Nom de votre compétence",
         "content": "Description",
-        "name": "Compétence"
+        "name": "Compétence",
+        "header": "Titre sur votre portfolio"
     },
 
     "contact": {
-        "email": "Courriel de contact"
+        "email": "Courriel de contact",
+        "title": "Titre sur votre portfolio"
     },
 
     "home": {
         "content":
             "<h3 class='line' >Bonjour !</h3>" +
             "<p>De nouvelles fonctionnalités viendront bientot !</p>"
-    },
-
-    "isen": {
-        "name": "ISEN"
     },
 
     "settings": {

@@ -5,7 +5,7 @@ module.exports = {
 
     "navigation": {
         "presentation": "Presentation",
-        "education": "Education",
+        "education": "Educations",
         "skills": "Skills",
         "experiences": "Experiences",
         "hobbies": "Hobbies",
@@ -13,19 +13,18 @@ module.exports = {
         "save": "View",
         "contact": "Contact",
         "home": "Home",
-        "settings": "Settings",
-        "isen": "ISEN"
+        "settings": "Settings"
     },
 
     "banner": {
-        "title": "Title of your banner",
+        "header": "Title of your banner",
         "content": "Content to display on your banner",
         "avatar": "Avatar to show on your banner",
         "icon": "Icon to show in the tab of your web browser"
     },
 
     "presentation": {
-        "title": "Title of your presentation",
+        "header": "Title of your presentation",
         "content": "Content of your presentation",
     },
 
@@ -33,40 +32,41 @@ module.exports = {
         "title": "Title of your education",
         "date": "Date that you were in",
         "content": "Description of your education",
-        "name": "Education"
+        "name": "Education",
+        "header": "Title on the porfolio"
     },
 
     "experience": {
         "title": "Title of your experience",
         "date": "Date you were in",
         "content": "Description",
-        "name": "Experience"
+        "name": "Experience",
+        "header": "Title on the porfolio"
     },
 
     "hobbie": {
         "category": "Name of your hobbie",
         "content": "Description",
-        "name": "Hobbie"
+        "name": "Hobbie",
+        "header": "Title on the porfolio"
     },
 
     "skill": {
         "category": "Name of your skill",
         "content": "Description",
-        "name": "Skill"
+        "name": "Skill",
+        "header": "Title on the porfolio"
     },
 
     "contact": {
-        "email": "Email was send message"
+        "email": "Email was send message",
+        "title": "Title on your porfolio"
     },
 
     "home": {
         "content":
             "<h3 class='line' >Welcome !</h3>" +
             "<p>Better functionnalities coming soon !</p>"
-    },
-
-    "isen": {
-        "name": "ISEN"
     },
 
     "settings": {
