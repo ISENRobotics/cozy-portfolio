@@ -17,14 +17,14 @@ module.exports = {
     },
 
     "banner": {
-        "title": "Titre de votre bannière",
+        "header": "Titre de votre bannière",
         "content": "Contenu à afficher dans votre bannière",
         "avatar": "Avatar à afficher avec votre bannière",
         "icon": "Icone à afficher dans votre onglet de navigateur web"
     },
 
     "presentation": {
-        "title": "Titre de votre présentation",
+        "header": "Titre de votre présentation",
         "content": "Contenu de votre présentation",
     },
 

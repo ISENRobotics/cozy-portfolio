@@ -17,14 +17,14 @@ module.exports = {
     },
 
     "banner": {
-        "title": "Title of your banner",
+        "header": "Title of your banner",
         "content": "Content to display on your banner",
         "avatar": "Avatar to show on your banner",
         "icon": "Icon to show in the tab of your web browser"
     },
 
     "presentation": {
-        "title": "Title of your presentation",
+        "header": "Title of your presentation",
         "content": "Content of your presentation",
     },
 
