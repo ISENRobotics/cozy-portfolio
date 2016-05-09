@@ -24,9 +24,6 @@ before_install:
     - env NAME=data-system TOKEN=token forever start -o forever-ds.log build/server.js
     - sleep 5
 
-before_script:
-    - npm run-script start
-
 script:
     - npm run-script lint
     - npm run-script test
