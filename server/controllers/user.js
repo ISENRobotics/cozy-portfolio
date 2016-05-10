@@ -68,6 +68,7 @@ var getUserResource = function( resource, callback ) {
 };
 
 module.exports = {
+    locale: getLocale,
     getLocale: function( req, res ) {
         /* get the locale in cozyinstance */
         getLocale( function( err, locale ) {

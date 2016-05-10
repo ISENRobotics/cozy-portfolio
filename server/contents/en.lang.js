@@ -1,19 +1,19 @@
 module.exports = {
     "banner" : {
-        "header" : "Portfolio - CV en ligne - Site personnel",
+        "header" : "Portfolio - Online resume - Personnal website",
         "icon" : "",
         "avatar" : "",
         "content" : ""
     },
     "presentation" : {
-        "header" : "À propos de moi",
+        "header" : "About me",
         "content" : ""
     },
     "contact" : {
-        "header" : "Contactez-moi"
+        "header" : "Contact me"
     },
     "educations" : {
-        "header" : "Ma formation",
+        "header" : "Educations",
         "contents" : [{
             "header" : "",
             "name" : "",
@@ -23,7 +23,7 @@ module.exports = {
         }]
     },
     "skills" : {
-        "header" : "Mes compétences",
+        "header" : "My skills",
         "contents" : [{
             "header" : "",
             "name" : "",
@@ -32,7 +32,7 @@ module.exports = {
         }]
     },
     "experiences" : {
-        "header" : "Mon expériences",
+        "header" : "Experiences",
         "contents" : [{
             "header" : "",
             "name" : "",
@@ -42,7 +42,7 @@ module.exports = {
         }]
     },
     "hobbies" : {
-        "header" : "Mes hobbies et loisirs",
+        "header" : "Hobbies",
         "contents" : [{
             "header" : "",
             "name" : "",
