@@ -8,22 +8,6 @@ node_js:
   - "0.12"
   - "0.10"
 
-services:
-    - couchdb
-
-env:
-    global:
-        - PORT=9200
-
-before_install:
-    - travis_retry npm install npm@latest-2 -g
-    - travis_retry npm install forever coffee-script -g
-    - travis_retry git clone git://github.com/cozy/cozy-data-system.git
-    - cd cozy-data-system
-    - travis_retry npm install #data-system
-    - env NAME=data-system TOKEN=token forever start -o forever-ds.log build/server.js
-    - sleep 5
-
 script:
     - npm run-script lint
     - npm run-script test
@@ -33,5 +17,3 @@ after_success:
 
 after_failure:
     - export BUILD_RESULT="ERRORED"
-    - cat cozy-data-system/forever-ds.log
-    - cat cozy-data-system/log/test.log

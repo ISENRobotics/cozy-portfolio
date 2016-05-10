@@ -7,7 +7,7 @@ module.exports = function( QUnit ) {
 
         http.get( {
             port: process.env.PORT | 9200,
-            path: '/portfolio'
+            path: '/'
         },
         function( res ) {
             assert.equal( res.statusCode, 200 );
