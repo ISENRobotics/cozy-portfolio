@@ -43,6 +43,14 @@ var portfolio = cozydb.getModel( 'portfolio', {
         type: Object
     },
 
+    'settings': {
+        default: {
+            theme: "default"
+        },
+
+        type: Object
+    },
+
     type: Object
 });
 
