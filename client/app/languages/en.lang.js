@@ -1,6 +1,8 @@
 module.exports = {
     "app": {
-        "title": "Portfolio"
+        "title": "Portfolio",
+        "remove": "Remove",
+        "add": "Add"
     },
 
     "navigation": {
