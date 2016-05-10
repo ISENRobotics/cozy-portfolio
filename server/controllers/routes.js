@@ -44,6 +44,10 @@ module.exports = {
         get: user.getEmail
     },
 
+    'public/user/email' : {
+        get: user.getEmail
+    },
+
     'user/public_name' : {
         get: user.getPublicName
     },
