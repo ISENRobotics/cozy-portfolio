@@ -1,5 +1,6 @@
 var logger = require( '../models/logger' );
 var pfolio = require('../models/portfolio');
+// var user   = require( './user' );
 
 var getPortfolio = function( callback ) {
     pfolio.request('all', function(err, portfolios) {
@@ -68,16 +69,26 @@ var resetPortfolio = function( callback ) {
 };
 
 var createThePortfolio = function( callback ) {
-    pfolio.create( {}, function(err, portfolio) {
-        if(err) {
-            /* If error, log and return it */
-            logger.error( err.message );
-            callback( err );
-        } else {
-            logger.info( 'Portfolio created' );
-            callback( null, portfolio );
-        }
-    });
+    // user.getLocale( function( err, locale ) {
+    //     if(err) {
+    //         callback(err);
+    //     } else {
+
+//require( "../contents/" + /*locale*/ "fr" + ".lang" )
+
+            pfolio.create( {}, function(err, portfolio) {
+                if(err) {
+                    /* If error, log and return it */
+                    logger.error( err.message );
+                    callback( err );
+                } else {
+                    logger.info( 'Portfolio created' );
+                    callback( null, portfolio );
+                }
+            });
+    //
+    //     }
+    // });
 };
 
 var updateResource = function( req, callback ) {

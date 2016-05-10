@@ -59,7 +59,7 @@ module.exports = {
     },
 
     "contact": {
-        "email": "Email was send message",
+        "email": "Email address where messages will be send",
         "title": "Title on your porfolio"
     },
 
