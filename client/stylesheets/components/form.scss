@@ -99,4 +99,8 @@ button, .button, input[type=button] {
     &.success {
         background-color: $green;
     }
+
+    &.warn {
+        background-color: $red;
+    }
 }

@@ -1,20 +1,28 @@
-<div class="wrapper-center" >
-    <form class="container" >
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <h2>{{ 'settings.name' | translate }}</h2>
+<form class="container" >
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <h2>{{ 'settings.name' | translate }}</h2>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <div class="input-field" >
+                <select ng-model="settings.theme" ng-change="change()" ng-class="{ 'not-empty': !!settings.theme }" >
+                    <option ng-repeat="theme in themes" ng-value="theme" >{{ theme }}</option>
+                </select>
+                <label>{{ 'settings.theme' | translate }}</label>
             </div>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col s12 m6 l2" >
+            <button ng-click="destroy()" class="warn" >{{ 'settings.destroy.button' | translate }}</button>
         </div>
 
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <div class="input-field" >
-                    <select ng-model="settings.theme" ng-class="{ 'not-empty': !!settings.theme }" >
-                        <option ng-repeat="theme in themes" ng-value="theme" >{{ theme }}</option>
-                    </select>
-                    <label>{{ 'settings.theme' | translate }}</label>
-                </div>
-            </div>
+        <div class="col s12 m6 l10" >
+            <label>{{ 'settings.destroy.label' | translate }}</label>
         </div>
-    </form>
-</div>
+    </div>
+</form>

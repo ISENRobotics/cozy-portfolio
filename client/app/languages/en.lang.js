@@ -1,6 +1,8 @@
 module.exports = {
     "app": {
-        "title": "Portfolio"
+        "title": "Portfolio",
+        "remove": "Remove",
+        "add": "Add"
     },
 
     "navigation": {
@@ -72,6 +74,11 @@ module.exports = {
     "settings": {
         "name": "Settings",
         "theme": "Template to use",
-        "pick": "Pick one"
+        "pick": "Pick one",
+        "destroy": {
+            "button": "Reset",
+            "label": "Reset data of your portfolio",
+            "success": "Successfully reset portfolio"
+        }
     }
 };

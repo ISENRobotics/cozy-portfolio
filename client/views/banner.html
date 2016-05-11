@@ -1,45 +1,43 @@
-<div class="wrapper-center" >
-    <form class="container" >
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <h2>{{ 'navigation.banner' | translate }}</h2>
-            </div>
+<form class="container" >
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <h2>{{ 'navigation.banner' | translate }}</h2>
         </div>
+    </div>
 
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <div class="input-field" >
-                    <input type="text" ng-model="banner.header" ng-change="change()" ng-class="{ 'not-empty': !!banner.header }" />
-                    <label>{{ 'banner.header' | translate }}</label>
-                </div>
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <div class="input-field" >
+                <input type="text" ng-model="banner.header" ng-change="change()" ng-class="{ 'not-empty': !!banner.header }" />
+                <label>{{ 'banner.header' | translate }}</label>
             </div>
         </div>
+    </div>
 
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <div class="input-field" >
-                    <input type="text" ng-model="banner.avatar" ng-change="change()" ng-class="{ 'not-empty': !!banner.avatar }" />
-                    <label>{{ 'banner.avatar' | translate }}</label>
-                </div>
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <div class="input-field" >
+                <input type="text" ng-model="banner.avatar" ng-change="change()" ng-class="{ 'not-empty': !!banner.avatar }" />
+                <label>{{ 'banner.avatar' | translate }}</label>
             </div>
         </div>
+    </div>
 
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <div class="input-field" >
-                    <input type="text" ng-model="banner.icon" ng-change="change()" ng-class="{ 'not-empty': !!banner.icon }" />
-                    <label>{{ 'banner.icon' | translate }}</label>
-                </div>
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <div class="input-field" >
+                <input type="text" ng-model="banner.icon" ng-change="change()" ng-class="{ 'not-empty': !!banner.icon }" />
+                <label>{{ 'banner.icon' | translate }}</label>
             </div>
         </div>
+    </div>
 
-        <div class="row" >
-            <div class="col s12 m12 l12" >
-                <div class="input-field" >
-                    <textarea rows="10" ng-model="banner.content" ng-change="change()" ng-class="{ 'not-empty': !!banner.content }" ></textarea>
-                    <label>{{ 'banner.content' | translate }}</label>
-                </div>
+    <div class="row" >
+        <div class="col s12 m12 l12" >
+            <div class="input-field" >
+                <textarea rows="10" ng-model="banner.content" ng-change="change()" ng-class="{ 'not-empty': !!banner.content }" ></textarea>
+                <label>{{ 'banner.content' | translate }}</label>
             </div>
         </div>
-    </form>
-</div>
+    </div>
+</form>

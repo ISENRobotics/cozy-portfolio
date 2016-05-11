@@ -43,8 +43,7 @@ var routes = [
     { syml: '/vendor/angular', real: 'node_modules/angular-sanitize' },
     { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
     { syml: '/stylesheets',    real: 'node_modules/normalize-css' },
-    { syml: '/',               real: 'client/' },
-    { syml: '/public',         real: 'client/public/templates/default' }
+    { syml: '/',               real: 'client/' }
 ];
 
 for( var i in routes ) {
@@ -52,6 +51,10 @@ for( var i in routes ) {
 
     extensions.push( router.use( routes[i].syml, americano.static( path.join( __dirname, '..', routes[i].real ))));
 }
+
+// ----------------------------------------------------------------------------
+// dynamic routing for themes
+extensions.push( require( './controllers/dynamic' ));
 
 // ----------------------------------------------------------------------------
 // create settings
