@@ -73,7 +73,12 @@ module.exports = {
 
     "settings": {
         "name": "Paramètres",
-        "theme": "Modéle à utiliser",
-        "pick": "Sélectionnez-en un"
+        "theme": "Modèle à utiliser",
+        "pick": "Sélectionnez-en un",
+        "destroy": {
+            "button": "Réinitialiser",
+            "label": "Réinitialiser les données de votre portfolio",
+            "success": "Réinitialisation réussi"
+        }
     }
 };
