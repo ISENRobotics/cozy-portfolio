@@ -1,7 +1,7 @@
 {
   "name": "cozy-portfolio",
   "cozy-displayName": "Portfolio",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Cozy portfolio factory fully configurable",
   "main": "server.js",
   "scripts": {
@@ -45,7 +45,7 @@
     "htmlhint-stylish": "^1.0.3",
     "jshint-stylish": "^2.2.0",
     "nodemon": "^1.9.2",
-    "qunit-color": "^1.15.0-1",
+    "qunitjs": "^2.0.0-rc1",
     "vinyl-named": "^1.1.0",
     "walk": "^2.3.9",
     "webpack-stream": "^3.2.0"

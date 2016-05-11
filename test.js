@@ -2,7 +2,7 @@
 // requirements
 var walk   = require( 'walk' );
 var path   = require( 'path' );
-var qunit  = require( 'qunit-color' );
+var qunit  = require( 'qunitjs' );
 var logger = require( './server/models/logger' );
 
 // ----------------------------------------------------------------------------
@@ -15,15 +15,15 @@ var walker = walk.walk( 'server', {
 // walk over fs
 logger.info( 'Detect files' );
 
-walker.on( 'file', function( root, fileStats, next ) {  
+walker.on( 'file', function( root, fileStats, next ) {
     // ----------------------------------------------------------------------------
     // pass test for only file ending by .test.js
     if( /\.test\.js$/.test( fileStats.name )) {
         logger.info( 'file detected : ' + path.join( root, fileStats.name ));
-        
+
         require( path.join( __dirname, root, fileStats.name ))( qunit );
     }
-    
+
     next();
 });
 
@@ -35,10 +35,10 @@ walker.on( 'end', function() {
         logger.info( 'Passed : ' + details.passed );
         logger.info( 'failed : ' + details.failed );
         logger.info( 'During : ' + details.runtime + ' ms' );
-        
+
         process.exit( details.failed );
-    }); 
-   
+    });
+
     logger.info( 'Launch QUnit test' );
     qunit.load();
 });
