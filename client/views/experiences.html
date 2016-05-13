@@ -40,6 +40,15 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="input-field">
+                    <input type="text" ng-model="content.type" ng-change="change()" ng-class="{ 'not-empty': !!content.type }" />
+                    <label>{{ 'experience.type' | translate }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="input-field">
                     <textarea rows="4" ng-model="content.content" ng-change="change()" ng-class="{ 'not-empty': !!content.content }" ></textarea>
                     <label>{{ 'experience.content' | translate }}</label>
                 </div>
