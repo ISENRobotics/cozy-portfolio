@@ -63,7 +63,10 @@ module.exports = {
 
     "contact": {
         "email": "Email was send message",
-        "title": "Title on your porfolio"
+        "title": "Title on your porfolio",
+        "twitter": "URL Twitter",
+        "facebook": "URL Facebook",
+        "linkedin": "URL Linkedin"
     },
 
     "home": {

@@ -63,7 +63,10 @@ module.exports = {
 
     "contact": {
         "email": "Courriel de contact",
-        "title": "Titre sur votre portfolio"
+        "title": "Titre sur votre portfolio",
+        "twitter": "URL Twitter",
+        "facebook": "URL Facebook",
+        "linkedin": "URL Linkedin"
     },
 
     "home": {
