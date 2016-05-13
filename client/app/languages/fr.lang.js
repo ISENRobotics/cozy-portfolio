@@ -43,7 +43,8 @@ module.exports = {
         "date": "Date",
         "content": "Description",
         "name": "Expérience",
-        "header": "Titre sur votre portfolio"
+        "header": "Titre sur votre portfolio",
+        "type": "Type de votre expérience"
     },
 
     "hobbie": {
