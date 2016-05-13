@@ -17,6 +17,7 @@
 var portfolio = require( './portfolio' );
 var user      = require( './user' );
 var themes    = require( './themes' );
+var isen    = require( './isen' );
 
 module.exports = {
     'portfolio' : {
@@ -58,5 +59,10 @@ module.exports = {
 
     'themes' : {
         get: themes.get
+    },
+
+    'isen' : {
+        post: isen.setIsenStudentDatas,
+        get: isen.setIsenStudentDatas
     }
 };

@@ -32,10 +32,9 @@ module.exports = {
         }]
     },
     "experiences" : {
-        "header" : "Mon expériences",
+        "header" : "Mon expérience",
         "contents" : [{
-            "header" : "",
-            "name" : "",
+            "type" : "",
             "date" : "",
             "title" : "",
             "content" : ""

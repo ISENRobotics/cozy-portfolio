@@ -123,6 +123,7 @@ var updateResource = function( req, callback ) {
 };
 
 module.exports = {
+    getPortfolio: getPortfolio,
     get: function( req, res ) {
         /* get the portfolio and return the resource */
         getPortfolio( function( err, portfolio ) {
