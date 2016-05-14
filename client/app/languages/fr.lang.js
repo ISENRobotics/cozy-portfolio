@@ -77,12 +77,21 @@ module.exports = {
 
     "settings": {
         "name": "Paramètres",
-        "theme": "Modèle à utiliser",
+        "theme": "Thème",
+        "changeTheme": "Modèle à utiliser",
+        "upload": "Téléverser",
+        "reset": "Réinitialiser",
+        "cv": "Téléversement du Curriculum Vitae",
         "pick": "Sélectionnez-en un",
         "destroy": {
             "button": "Réinitialiser",
             "label": "Réinitialiser les données de votre portfolio",
             "success": "Réinitialisation réussi"
+        },
+
+        "uploaded": {
+            "success": "Téléversement réussi",
+            "error": "Echec du téléversement"
         }
     }
 };

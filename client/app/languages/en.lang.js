@@ -77,12 +77,21 @@ module.exports = {
 
     "settings": {
         "name": "Settings",
-        "theme": "Template to use",
+        "theme": "Theme",
+        "upload": "Upload",
+        "reset": "Reset",
+        "cv": "Upload Curriculum Vitae",
+        "changeTheme": "Template to use",
         "pick": "Pick one",
         "destroy": {
             "button": "Reset",
             "label": "Reset data of your portfolio",
             "success": "Successfully reset portfolio"
+        },
+
+        "uploaded": {
+            "success": "Upload sucessful",
+            "error": "Upload failed"
         }
     }
 };

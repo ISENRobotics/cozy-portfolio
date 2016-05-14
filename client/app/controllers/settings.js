@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------------
 // define controller
-app.controller( 'settings', ['$scope', '$http', '$translate', '$window', function( $scope, $http, $translate, $window ) {
+app.controller( 'settings', ['$scope', '$http', '$translate', '$window', 'Upload', function( $scope, $http, $translate, $window, Upload ) {
     $http.get( 'themes' ).then( function( res ) {
         $scope.themes = res.data;
     });
@@ -19,6 +19,28 @@ app.controller( 'settings', ['$scope', '$http', '$translate', '$window', functio
                 $window.alert( trad );
                 $window.document.location.reload( true );
             });
+        });
+    };
+
+    // upload on file select or drop
+    $scope.upload = function (file) {
+        Upload.upload({
+            url: 'upload',
+            data: {
+                cv: file
+            }
+        }).then( function() {
+            // success
+            $translate( 'settings.uploaded.success' ).then( function( trad ) {
+                $window.alert( trad );
+            });
+        }, function() {
+            // error
+            $translate( 'settings.uploaded.error' ).then( function( trad ) {
+                $window.alert( trad );
+            });
+        }, function() {
+            // progress event
         });
     };
 }]);
