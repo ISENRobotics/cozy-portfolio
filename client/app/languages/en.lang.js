@@ -83,6 +83,7 @@ module.exports = {
         "cv": "Upload Curriculum Vitae",
         "changeTheme": "Template to use",
         "pick": "Pick one",
+        "uploadLabel": "Upload a new CV",
         "destroy": {
             "button": "Reset",
             "label": "Reset data of your portfolio",

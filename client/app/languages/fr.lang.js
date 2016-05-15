@@ -83,6 +83,7 @@ module.exports = {
         "reset": "Réinitialiser",
         "cv": "Téléversement du Curriculum Vitae",
         "pick": "Sélectionnez-en un",
+        "uploadLabel": "Téléverser un nouveau CV",
         "destroy": {
             "button": "Réinitialiser",
             "label": "Réinitialiser les données de votre portfolio",
