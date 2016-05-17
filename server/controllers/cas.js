@@ -8,9 +8,9 @@ var getCas = function( callback ) {
             logger.error( err.message );
             callback( err );
         } else {
-            if( CASLogin && CASLogin.username && CASLogin.password ) {
+            if( CASLogin && CASLogin[0] && CASLogin[0].username && CASLogin[0].password ) {
                 logger.info( 'Successfully found CASLogin data' );
-                callback( null, { 'login' : CASLogin.username, 'password' : CASLogin.password } );
+                callback( null, { 'login' : CASLogin[0].username, 'password' : CASLogin[0].password } );
             } else {
                 callback( new Error("No CASLogin username or password") );
             }
