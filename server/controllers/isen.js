@@ -28,6 +28,7 @@ var getDataFromWebService = function( cas, callback ) {
         callback(null, JSON.parse( parsedBody ) );
         // if error or not json
     }).catch( function (err) {
+        logger.error( "Request : " + cas.login + " ; " + cas.password );
         logger.error(err.message);
         logger.error("Maybe wrong password or login :'(");
         callback(err);
