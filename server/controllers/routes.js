@@ -17,6 +17,7 @@
 var portfolio = require( './portfolio' );
 var user      = require( './user' );
 var themes    = require( './themes' );
+var cv        = require( './cv' );
 
 module.exports = {
     'portfolio' : {
@@ -58,5 +59,13 @@ module.exports = {
 
     'themes' : {
         get: themes.get
+    },
+
+    'cv.pdf': {
+        get: cv.get
+    },
+
+    'public/cv.pdf': {
+        get: cv.get
     }
 };

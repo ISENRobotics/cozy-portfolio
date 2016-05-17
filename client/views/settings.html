@@ -1,7 +1,13 @@
-<form class="container" >
+<div class="container" >
     <div class="row" >
         <div class="col s12 m12 l12" >
             <h2>{{ 'settings.name' | translate }}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3 class="line" >{{ 'settings.theme' | translate }}</h3>
         </div>
     </div>
 
@@ -11,8 +17,32 @@
                 <select ng-model="settings.theme" ng-change="change()" ng-class="{ 'not-empty': !!settings.theme }" >
                     <option ng-repeat="theme in themes" ng-value="theme" >{{ theme }}</option>
                 </select>
-                <label>{{ 'settings.theme' | translate }}</label>
+                <label>{{ 'settings.changeTheme' | translate }}</label>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3 class="line" >{{ 'settings.cv' | translate }}</h3>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col s12 m6 l2" >
+            <button class="button" ngf-select="upload( file )" ng-model="file" name="file" ngf-pattern="'application/pdf'" ngf-accept="'application/pdf'" ngf-max-size="20MB" >
+                {{ 'settings.upload' | translate }}
+            </button>
+        </div>
+
+        <div class="col s12 m6 l10" >
+            <label>{{ 'settings.uploadLabel' | translate }}</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3 class="line" >{{ 'settings.reset' | translate }}</h3>
         </div>
     </div>
 
@@ -25,4 +55,4 @@
             <label>{{ 'settings.destroy.label' | translate }}</label>
         </div>
     </div>
-</form>
+</div>

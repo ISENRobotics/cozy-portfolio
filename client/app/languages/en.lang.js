@@ -63,7 +63,10 @@ module.exports = {
 
     "contact": {
         "email": "Email address where messages will be send",
-        "title": "Title on your porfolio"
+        "title": "Title on your porfolio",
+        "twitter": "URL Twitter",
+        "facebook": "URL Facebook",
+        "linkedin": "URL Linkedin"
     },
 
     "home": {
@@ -74,12 +77,22 @@ module.exports = {
 
     "settings": {
         "name": "Settings",
-        "theme": "Template to use",
+        "theme": "Theme",
+        "upload": "Upload",
+        "reset": "Reset",
+        "cv": "Upload Curriculum Vitae",
+        "changeTheme": "Template to use",
         "pick": "Pick one",
+        "uploadLabel": "Upload a new CV",
         "destroy": {
             "button": "Reset",
             "label": "Reset data of your portfolio",
             "success": "Successfully reset portfolio"
+        },
+
+        "uploaded": {
+            "success": "Upload sucessful",
+            "error": "Upload failed"
         }
     }
 };

@@ -6,7 +6,7 @@ module.exports = function( QUnit ) {
         var done = assert.async(1);
 
         http.get( {
-            port: process.env.PORT | 9200,
+            port: process.env.PORT || 9200,
             path: '/'
         },
         function( res ) {

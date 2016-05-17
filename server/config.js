@@ -42,6 +42,7 @@ var routes = [
     { syml: '/vendor/angular', real: 'node_modules/angular-route' },
     { syml: '/vendor/angular', real: 'node_modules/angular-sanitize' },
     { syml: '/vendor/angular', real: 'node_modules/angular-translate/dist' },
+    { syml: '/vendor/angular', real: 'node_modules/ng-file-upload/dist' },
     { syml: '/stylesheets',    real: 'node_modules/normalize-css' },
     { syml: '/',               real: 'client/' }
 ];
@@ -55,6 +56,10 @@ for( var i in routes ) {
 // ----------------------------------------------------------------------------
 // dynamic routing for themes
 extensions.push( require( './controllers/dynamic' ));
+
+// ----------------------------------------------------------------------------
+// upload cv
+extensions.push( require( './controllers/upload' ));
 
 // ----------------------------------------------------------------------------
 // create settings

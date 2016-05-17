@@ -8,7 +8,7 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     // ----------------------------------------------------------------------------
     // get data provide by cozydb
     $http.get( 'portfolio/skills' ).then( function( res ) {
-        if( res.status == 200 && !require( 'empty-value' )( res.data )) {
+        if( !require( 'empty-value' )( res.data )) {
             $scope.data = res.data;
         }
     });
@@ -16,11 +16,7 @@ app.controller( 'skills', ['$scope', '$http', function( $scope, $http ) {
     // ----------------------------------------------------------------------------
     // ng change listener
     $scope.change = function() {
-        $http.post( 'portfolio/skills', $scope.data ).then( function( res ) {
-            if( res.status != 200 ) {
-                // insert error logs here
-            }
-        });
+        $http.post( 'portfolio/skills', $scope.data );
     };
 
     // ----------------------------------------------------------------------------
