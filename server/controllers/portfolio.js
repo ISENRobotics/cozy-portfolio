@@ -44,7 +44,7 @@ var resetPortfolio = function( callback ) {
         } else {
             /* Delete portfolio, then create a new */
             logger.info( 'Delete portfolio' );
-            if( portfolios.length > 2 ) {
+            if( portfolios.length >= 2 ) {
                 /* If a second portfolio exists, we got problems ... */
                 logger.error( 'More than ONE portfolio ... not possible !!!');
             }

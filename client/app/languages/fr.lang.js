@@ -63,7 +63,10 @@ module.exports = {
 
     "contact": {
         "email": "Adresse mail sur laquelle seront envoyés les messages",
-        "title": "Titre sur votre portfolio"
+        "title": "Titre sur votre portfolio",
+        "twitter": "URL Twitter",
+        "facebook": "URL Facebook",
+        "linkedin": "URL Linkedin"
     },
 
     "home": {
@@ -74,12 +77,22 @@ module.exports = {
 
     "settings": {
         "name": "Paramètres",
-        "theme": "Modèle à utiliser",
+        "theme": "Thème",
+        "changeTheme": "Modèle à utiliser",
+        "upload": "Téléverser",
+        "reset": "Réinitialiser",
+        "cv": "Téléversement du Curriculum Vitae",
         "pick": "Sélectionnez-en un",
+        "uploadLabel": "Téléverser un nouveau CV",
         "destroy": {
             "button": "Réinitialiser",
             "label": "Réinitialiser les données de votre portfolio",
             "success": "Réinitialisation réussi"
+        },
+
+        "uploaded": {
+            "success": "Téléversement réussi",
+            "error": "Echec du téléversement"
         }
     }
 };

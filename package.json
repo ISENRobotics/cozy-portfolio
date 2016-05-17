@@ -64,6 +64,8 @@
     "empty-value": "^1.0.1",
     "helmet": "^2.0.0",
     "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "ng-file-upload": "^12.0.4",
     "normalize-css": "^2.3.1",
     "printit": "^0.1.20",
     "request-promise": "^3.0.0",

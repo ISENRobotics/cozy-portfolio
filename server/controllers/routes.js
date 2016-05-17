@@ -18,6 +18,7 @@ var portfolio = require( './portfolio' );
 var user      = require( './user' );
 var themes    = require( './themes' );
 var isen    = require( './isen' );
+var cv        = require( './cv' );
 
 module.exports = {
     'portfolio' : {
@@ -64,5 +65,13 @@ module.exports = {
     'isen' : {
         post: isen.setIsenStudentDatas,
         get: isen.setIsenStudentDatas
+    },
+
+    'cv.pdf': {
+        get: cv.get
+    },
+
+    'public/cv.pdf': {
+        get: cv.get
     }
 };
