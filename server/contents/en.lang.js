@@ -34,8 +34,7 @@ module.exports = {
     "experiences" : {
         "header" : "Experiences",
         "contents" : [{
-            "header" : "",
-            "name" : "",
+            "type" : "",
             "date" : "",
             "title" : "",
             "content" : ""

@@ -10,5 +10,9 @@ module.exports = {
 
     cozyinstance: {
         all: cozydb.defaultRequests.all
+    },
+
+    cas: {
+        all: cozydb.defaultRequests.all
     }
 };
