@@ -3,15 +3,6 @@ var portfolio = require( '../controllers/portfolio' );
 var casModule = require( '../controllers/cas' );
 var rp = require('request-promise');
 
-var cas = {};
-casModule.get( function( err, caslogin ) {
-    if(err) {
-        logger.error( err.message );
-    } else {
-        cas = caslogin;
-    }
-});
-
 var getDataFromWebService = function( cas, callback ) {
 
     var post_options = {
@@ -90,16 +81,25 @@ var setExperiences = function( experiences, callback ) {
 
 module.exports = {
     setIsenStudentDatas: function( req, res ) {
-        logger.info("Starting to get data from ISEN WS");
-        getDataFromWebService( cas, function( err, data ) {
+        casModule.get( function( err, caslogin ) {
             if(err) {
+                logger.error( err.message );
                 res.sendStatus(500);
             } else {
-                setExperiences( data.experiences, function( err ) {
+                logger.info("Starting to get data from ISEN WS");
+                getDataFromWebService( caslogin, function( err, data ) {
                     if(err) {
+                        logger.error( err.message );
                         res.sendStatus(500);
                     } else {
-                        res.sendStatus(200);
+                        setExperiences( data.experiences, function( err ) {
+                            if(err) {
+                                logger.error( err.message );
+                                res.sendStatus(500);
+                            } else {
+                                res.sendStatus(200);
+                            }
+                        });
                     }
                 });
             }

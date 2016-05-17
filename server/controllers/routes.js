@@ -17,7 +17,7 @@
 var portfolio = require( './portfolio' );
 var user      = require( './user' );
 var themes    = require( './themes' );
-var isen    = require( './isen' );
+var isen      = require( './isen' );
 var cv        = require( './cv' );
 
 module.exports = {
