@@ -84,6 +84,14 @@ module.exports = {
         "changeTheme": "Template to use",
         "pick": "Pick one",
         "uploadLabel": "Upload a new CV",
+        "isen": {
+            "header": "ISEN",
+            "label": "Import ISEN Data (experiences)",
+            "import": "Import",
+            "success": "Successfully import",
+            "failed": "Import failed"
+        },
+
         "destroy": {
             "button": "Reset",
             "label": "Reset data of your portfolio",

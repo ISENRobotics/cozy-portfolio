@@ -84,6 +84,14 @@ module.exports = {
         "cv": "Téléversement du Curriculum Vitae",
         "pick": "Sélectionnez-en un",
         "uploadLabel": "Téléverser un nouveau CV",
+        "isen": {
+            "header": "ISEN",
+            "label": "Importer les données ISEN (expériences)",
+            "import": "Importer",
+            "success": "Import réussi",
+            "failed": "Echec de l'import"
+        },
+
         "destroy": {
             "button": "Réinitialiser",
             "label": "Réinitialiser les données de votre portfolio",
