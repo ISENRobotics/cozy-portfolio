@@ -1,11 +1,16 @@
 var logger = require( '../models/logger' );
 var portfolio = require( '../controllers/portfolio' );
+var casModule = require( '../controllers/cas' );
 var rp = require('request-promise');
 
-var cas = {
-    login: "gbiann17",
-    password: "Azertyuiop29"
-};
+var cas = {};
+casModule.get( function( err, caslogin ) {
+    if(err) {
+        logger.error( err.message );
+    } else {
+        cas = caslogin;
+    }
+});
 
 var getDataFromWebService = function( cas, callback ) {
 
@@ -21,8 +26,10 @@ var getDataFromWebService = function( cas, callback ) {
     rp(post_options).then( function (parsedBody) {
         logger.info( 'Successfully download data from ISEN WS' );
         callback(null, JSON.parse( parsedBody ) );
+        // if error or not json
     }).catch( function (err) {
         logger.error(err.message);
+        logger.error("Maybe wrong password or login :'(");
         callback(err);
     });
 
