@@ -64,7 +64,7 @@ module.exports = {
 
     'isen' : {
         post: isen.setIsenStudentDatas,
-        get: isen.setIsenStudentDatas
+        get: isen.isIsenAppInstalled
     },
 
     'cv.pdf': {

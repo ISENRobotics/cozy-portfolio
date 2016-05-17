@@ -104,5 +104,14 @@ module.exports = {
                 });
             }
         });
+    },
+    isIsenAppInstalled: function( req, res ) {
+        casModule.get( function( err ) {
+            if(err) {
+                res.json( { "isIsenAppInstalled" : false } );
+            } else {
+                res.json( { "isIsenAppInstalled" : true } );
+            }
+        });
     }
 };
