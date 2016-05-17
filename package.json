@@ -82,6 +82,9 @@
     },
     "Portfolio": {
       "description": "Needs access to portfolio data"
-    }
+    },
+	"CASLogin" : {
+      "description": "Need CASLogin for ISEN users"
+	}
   }
 }
