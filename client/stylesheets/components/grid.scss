@@ -38,9 +38,9 @@ body {
                 &.s#{$i}, &.m#{$i}, &.l#{$i} {
                     float: left;
                 }
-
-                @media #{ $mq-small } {
-                    &.s#{$i} {
+                
+                @media #{ $mq-large } {
+                    &.l#{$i} {
                         width: calc(#{ 100% / $col * $i } - #{ $space * 4 });
                         margin: 0 #{ $space * 2 };
                         margin-bottom: #{ $space * 2 };
@@ -48,7 +48,7 @@ body {
                         transition: witdh $transition-time;
                     }
 
-                    &.offset-s#{$i} {
+                    &.offset-l#{$i} {
                         margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
                     }
                 }
@@ -66,9 +66,9 @@ body {
                         margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
                     }
                 }
-
-                @media #{ $mq-large } {
-                    &.l#{$i} {
+                
+                @media #{ $mq-small } {
+                    &.s#{$i} {
                         width: calc(#{ 100% / $col * $i } - #{ $space * 4 });
                         margin: 0 #{ $space * 2 };
                         margin-bottom: #{ $space * 2 };
@@ -76,7 +76,7 @@ body {
                         transition: witdh $transition-time;
                     }
 
-                    &.offset-l#{$i} {
+                    &.offset-s#{$i} {
                         margin-left: calc( #{ 100% / $col * $i } + #{ $space * 2 });
                     }
                 }
